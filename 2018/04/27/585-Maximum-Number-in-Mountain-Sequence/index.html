@@ -68,7 +68,7 @@
 
 
 
-  <meta name="keywords" content="binary search,algorithms,lintcode,easy," />
+  <meta name="keywords" content="binary search,algorithms,lintcode,medium," />
 
 
 
@@ -79,18 +79,18 @@
 
 
 
-<meta name="description" content="principle of binary search Don’t discard Target Decrease the target range in each step  code12345678910111213141516171819202122232425262728public class Solution &amp;#123;    public int lastPosition(int[]">
-<meta name="keywords" content="binary search,algorithms,lintcode,easy">
+<meta name="description" content="explanation和前面的一个元素比 code123456789101112131415161718192021222324252627282930public class Solution &amp;#123;    /*     * @param nums: a mountain sequence which increase firstly and then decrease     * @re">
+<meta name="keywords" content="binary search,algorithms,lintcode,medium">
 <meta property="og:type" content="article">
-<meta property="og:title" content="458. Last Position of Target">
-<meta property="og:url" content="http://yoursite.com/2018/04/27/LastPositionofTarget/index.html">
+<meta property="og:title" content="585. Maximum Number in Mountain Sequence">
+<meta property="og:url" content="http://yoursite.com/2018/04/27/585-Maximum-Number-in-Mountain-Sequence/index.html">
 <meta property="og:site_name" content="Evelyn&#39;s Blog">
-<meta property="og:description" content="principle of binary search Don’t discard Target Decrease the target range in each step  code12345678910111213141516171819202122232425262728public class Solution &amp;#123;    public int lastPosition(int[]">
+<meta property="og:description" content="explanation和前面的一个元素比 code123456789101112131415161718192021222324252627282930public class Solution &amp;#123;    /*     * @param nums: a mountain sequence which increase firstly and then decrease     * @re">
 <meta property="og:locale" content="en">
-<meta property="og:updated_time" content="2018-04-27T13:48:41.415Z">
+<meta property="og:updated_time" content="2018-04-27T13:51:13.599Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="458. Last Position of Target">
-<meta name="twitter:description" content="principle of binary search Don’t discard Target Decrease the target range in each step  code12345678910111213141516171819202122232425262728public class Solution &amp;#123;    public int lastPosition(int[]">
+<meta name="twitter:title" content="585. Maximum Number in Mountain Sequence">
+<meta name="twitter:description" content="explanation和前面的一个元素比 code123456789101112131415161718192021222324252627282930public class Solution &amp;#123;    /*     * @param nums: a mountain sequence which increase firstly and then decrease     * @re">
 
 
 
@@ -120,13 +120,13 @@
 
 
 
-  <link rel="canonical" href="http://yoursite.com/2018/04/27/LastPositionofTarget/"/>
+  <link rel="canonical" href="http://yoursite.com/2018/04/27/585-Maximum-Number-in-Mountain-Sequence/"/>
 
 
 
 
 
-  <title>458. Last Position of Target | Evelyn's Blog</title>
+  <title>585. Maximum Number in Mountain Sequence | Evelyn's Blog</title>
   
 
 
@@ -243,7 +243,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/04/27/LastPositionofTarget/">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/04/27/585-Maximum-Number-in-Mountain-Sequence/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Evelyn">
@@ -260,7 +260,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">458. Last Position of Target</h1>
+          <h1 class="post-title" itemprop="name headline">585. Maximum Number in Mountain Sequence</h1>
         
 
         <div class="post-meta">
@@ -272,7 +272,7 @@
               
                 <span class="post-meta-item-text">Posted on</span>
               
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2018-04-27T03:42:47-04:00">
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2018-04-27T09:45:53-07:00">
                 2018-04-27
               </time>
             
@@ -310,11 +310,8 @@
       
 
       
-        <h3 id="principle-of-binary-search"><a href="#principle-of-binary-search" class="headerlink" title="principle of binary search"></a>principle of binary search</h3><ol>
-<li>Don’t discard Target</li>
-<li>Decrease the target range in each step</li>
-</ol>
-<h3 id="code"><a href="#code" class="headerlink" title="code"></a>code</h3><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Solution</span> </span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">int</span> <span class="title">lastPosition</span><span class="params">(<span class="keyword">int</span>[] nums, <span class="keyword">int</span> target)</span> </span>&#123;</span><br><span class="line">        <span class="comment">// write your code here</span></span><br><span class="line">        <span class="keyword">if</span> (nums == <span class="keyword">null</span> || nums.length == <span class="number">0</span>) &#123;</span><br><span class="line">            <span class="keyword">return</span> -<span class="number">1</span>;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">int</span> start = <span class="number">0</span>, end = nums.length - <span class="number">1</span>;</span><br><span class="line">        <span class="keyword">while</span> (start + <span class="number">1</span> &lt; end) &#123;</span><br><span class="line">            <span class="keyword">int</span> mid = start + (end - start) / <span class="number">2</span>; <span class="comment">// avoid out of range</span></span><br><span class="line">            <span class="keyword">if</span> (nums[mid] == target) &#123; <span class="comment">// answer on the right part</span></span><br><span class="line">                start = mid;</span><br><span class="line">            &#125; <span class="keyword">else</span> <span class="keyword">if</span> (nums[mid] &lt; target) &#123; <span class="comment">// answer on the right part</span></span><br><span class="line">                start = mid;<span class="comment">// mid + 1</span></span><br><span class="line">            &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">                end = mid; <span class="comment">// mid - 1</span></span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">if</span> (nums[end] == target) &#123;</span><br><span class="line">            <span class="keyword">return</span> end;</span><br><span class="line">        &#125; <span class="keyword">else</span> <span class="keyword">if</span> (nums[start] == target) &#123;</span><br><span class="line">            <span class="keyword">return</span> start;</span><br><span class="line">        &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">            <span class="keyword">return</span> -<span class="number">1</span>;</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+        <h3 id="explanation"><a href="#explanation" class="headerlink" title="explanation"></a>explanation</h3><p>和前面的一个元素比</p>
+<h3 id="code"><a href="#code" class="headerlink" title="code"></a>code</h3><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Solution</span> </span>&#123;</span><br><span class="line">    <span class="comment">/*</span></span><br><span class="line"><span class="comment">     * @param nums: a mountain sequence which increase firstly and then decrease</span></span><br><span class="line"><span class="comment">     * @return: then mountain top</span></span><br><span class="line"><span class="comment">     */</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">int</span> <span class="title">mountainSequence</span><span class="params">(<span class="keyword">int</span>[] nums)</span> </span>&#123;</span><br><span class="line">        <span class="comment">// write your code here</span></span><br><span class="line">        <span class="keyword">if</span> (nums == <span class="keyword">null</span> || nums.length == <span class="number">0</span>) &#123;</span><br><span class="line">            <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        <span class="keyword">int</span> start = <span class="number">0</span>, end = nums.length - <span class="number">1</span>;</span><br><span class="line">        <span class="keyword">while</span> (start + <span class="number">1</span> &lt; end) &#123;</span><br><span class="line">            <span class="keyword">int</span> mid = start + (end - start) / <span class="number">2</span>;</span><br><span class="line">            <span class="keyword">if</span> (nums[mid] &gt; nums[mid - <span class="number">1</span>]) &#123; <span class="comment">// target on the right(include mid)</span></span><br><span class="line">                start = mid;</span><br><span class="line">            &#125; <span class="keyword">else</span> <span class="keyword">if</span> (nums[mid] &lt; nums[mid - <span class="number">1</span>]) &#123; <span class="comment">// target on the left(exclude mid)</span></span><br><span class="line">                end = mid - <span class="number">1</span>;</span><br><span class="line">            &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">                 end = mid;<span class="comment">//start = mid; 不会出现这种情况，in this case, can't do binary search</span></span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">if</span> (nums[start] &gt; nums[end]) &#123;</span><br><span class="line">            <span class="keyword">return</span> nums[start];</span><br><span class="line">        &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">            <span class="keyword">return</span> nums[end];</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
       
     </div>
@@ -338,7 +335,7 @@
           
             <a href="/tags/lintcode/" rel="tag"># lintcode</a>
           
-            <a href="/tags/easy/" rel="tag"># easy</a>
+            <a href="/tags/medium/" rel="tag"># medium</a>
           
         </div>
       
@@ -351,8 +348,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2018/04/26/FirstArticle/" rel="next" title="First Article">
-                <i class="fa fa-chevron-left"></i> First Article
+              <a href="/2018/04/27/LastPositionofTarget/" rel="next" title="458. Last Position of Target">
+                <i class="fa fa-chevron-left"></i> 458. Last Position of Target
               </a>
             
           </div>
@@ -360,10 +357,6 @@
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2018/04/27/585-Maximum-Number-in-Mountain-Sequence/" rel="prev" title="585. Maximum Number in Mountain Sequence">
-                585. Maximum Number in Mountain Sequence <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
@@ -490,7 +483,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#principle-of-binary-search"><span class="nav-number">1.</span> <span class="nav-text">principle of binary search</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#code"><span class="nav-number">2.</span> <span class="nav-text">code</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#explanation"><span class="nav-number">1.</span> <span class="nav-text">explanation</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#code"><span class="nav-number">2.</span> <span class="nav-text">code</span></a></li></ol></div>
             
 
           </div>
