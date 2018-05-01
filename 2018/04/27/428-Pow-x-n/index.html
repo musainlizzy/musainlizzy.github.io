@@ -79,18 +79,18 @@
 
 
 
-<meta name="description" content="explanation find range时，从index = 1开始 比较nums[index-1] 和 target区别 这道题是find first occurrence  code1234567891011121314151617181920212223242526272829303132public class Solution &amp;#123;    /*     * @param re">
+<meta name="description" content="iterativeexplanationRange of int:(32bit) -2,147,483,648 ~ 2,147,483,647从最小的负数转换成正数会integer overflow  判断n正负,if n &amp;lt; 0 , x = 1/ x, n = -(n + 1)if n &amp;gt;=0, no change iterative (we want log(n))a) N-&amp;gt">
 <meta name="keywords" content="binary search,lintcode,medium">
 <meta property="og:type" content="article">
-<meta property="og:title" content="447. Search in a Big Sorted Array">
-<meta property="og:url" content="http://yoursite.com/2018/04/27/447-Search-in-a-Big-Sorted-Array/index.html">
+<meta property="og:title" content="428. Pow(x, n)">
+<meta property="og:url" content="http://yoursite.com/2018/04/27/428-Pow-x-n/index.html">
 <meta property="og:site_name" content="Evelyn&#39;s Blog">
-<meta property="og:description" content="explanation find range时，从index = 1开始 比较nums[index-1] 和 target区别 这道题是find first occurrence  code1234567891011121314151617181920212223242526272829303132public class Solution &amp;#123;    /*     * @param re">
+<meta property="og:description" content="iterativeexplanationRange of int:(32bit) -2,147,483,648 ~ 2,147,483,647从最小的负数转换成正数会integer overflow  判断n正负,if n &amp;lt; 0 , x = 1/ x, n = -(n + 1)if n &amp;gt;=0, no change iterative (we want log(n))a) N-&amp;gt">
 <meta property="og:locale" content="en">
-<meta property="og:updated_time" content="2018-04-27T19:30:08.188Z">
+<meta property="og:updated_time" content="2018-05-01T20:59:38.375Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="447. Search in a Big Sorted Array">
-<meta name="twitter:description" content="explanation find range时，从index = 1开始 比较nums[index-1] 和 target区别 这道题是find first occurrence  code1234567891011121314151617181920212223242526272829303132public class Solution &amp;#123;    /*     * @param re">
+<meta name="twitter:title" content="428. Pow(x, n)">
+<meta name="twitter:description" content="iterativeexplanationRange of int:(32bit) -2,147,483,648 ~ 2,147,483,647从最小的负数转换成正数会integer overflow  判断n正负,if n &amp;lt; 0 , x = 1/ x, n = -(n + 1)if n &amp;gt;=0, no change iterative (we want log(n))a) N-&amp;gt">
 
 
 
@@ -120,13 +120,13 @@
 
 
 
-  <link rel="canonical" href="http://yoursite.com/2018/04/27/447-Search-in-a-Big-Sorted-Array/"/>
+  <link rel="canonical" href="http://yoursite.com/2018/04/27/428-Pow-x-n/"/>
 
 
 
 
 
-  <title>447. Search in a Big Sorted Array | Evelyn's Blog</title>
+  <title>428. Pow(x, n) | Evelyn's Blog</title>
   
 
 
@@ -253,7 +253,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/04/27/447-Search-in-a-Big-Sorted-Array/">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/04/27/428-Pow-x-n/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Evelyn">
@@ -270,7 +270,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">447. Search in a Big Sorted Array</h1>
+          <h1 class="post-title" itemprop="name headline">428. Pow(x, n)</h1>
         
 
         <div class="post-meta">
@@ -282,7 +282,7 @@
               
                 <span class="post-meta-item-text">Posted on</span>
               
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2018-04-27T14:56:38-07:00">
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2018-04-27T16:57:35-07:00">
                 2018-04-27
               </time>
             
@@ -323,9 +323,9 @@
                 <span class="post-meta-item-icon">
                   <i class="fa fa-comment-o"></i>
                 </span>
-                <a href="/2018/04/27/447-Search-in-a-Big-Sorted-Array/#comments" itemprop="discussionUrl">
+                <a href="/2018/04/27/428-Pow-x-n/#comments" itemprop="discussionUrl">
                   <span class="post-comments-count disqus-comment-count"
-                        data-disqus-identifier="2018/04/27/447-Search-in-a-Big-Sorted-Array/" itemprop="commentCount"></span>
+                        data-disqus-identifier="2018/04/27/428-Pow-x-n/" itemprop="commentCount"></span>
                 </a>
               </span>
             
@@ -333,7 +333,7 @@
 
           
           
-             <span id="/2018/04/27/447-Search-in-a-Big-Sorted-Array/" class="leancloud_visitors" data-flag-title="447. Search in a Big Sorted Array">
+             <span id="/2018/04/27/428-Pow-x-n/" class="leancloud_visitors" data-flag-title="428. Pow(x, n)">
                <span class="post-meta-divider">|</span>
                <span class="post-meta-item-icon">
                  <i class="fa fa-eye"></i>
@@ -364,17 +364,14 @@
       
 
       
-        <h3 id="explanation"><a href="#explanation" class="headerlink" title="explanation"></a>explanation</h3><ol>
-<li>find range时，从index = 1开始</li>
-<li>比较nums[index-1] 和 target区别</li>
-<li>这道题是find first occurrence</li>
-</ol>
-<h3 id="code"><a href="#code" class="headerlink" title="code"></a>code</h3><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Solution</span> </span>&#123;</span><br><span class="line">    <span class="comment">/*</span></span><br><span class="line"><span class="comment">     * @param reader: An instance of ArrayReader.</span></span><br><span class="line"><span class="comment">     * @param target: An integer</span></span><br><span class="line"><span class="comment">     * @return: An integer which is the first index of target.</span></span><br><span class="line"><span class="comment">     */</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">int</span> <span class="title">searchBigSortedArray</span><span class="params">(ArrayReader reader, <span class="keyword">int</span> target)</span> </span>&#123;</span><br><span class="line">        <span class="comment">// write your code here</span></span><br><span class="line">        <span class="comment">// get range</span></span><br><span class="line">        <span class="keyword">int</span> index = <span class="number">1</span>;</span><br><span class="line">        <span class="keyword">while</span> (reader.get(index - <span class="number">1</span>) &lt; target) &#123;</span><br><span class="line">            index = index * <span class="number">2</span>;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="comment">// binary search: find first occurrence</span></span><br><span class="line">        <span class="keyword">int</span> start = <span class="number">0</span>, end = index;</span><br><span class="line">        <span class="keyword">while</span> (start + <span class="number">1</span> &lt; end) &#123;</span><br><span class="line">            <span class="keyword">int</span> mid = start + (end - start) / <span class="number">2</span>;</span><br><span class="line">            <span class="keyword">if</span> (reader.get(mid) &lt; target) &#123; <span class="comment">// at right</span></span><br><span class="line">                start = mid;</span><br><span class="line">            &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">                end = mid;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">if</span> (reader.get(start) == target) &#123;</span><br><span class="line">            <span class="keyword">return</span> start;</span><br><span class="line">        &#125; <span class="keyword">else</span> <span class="keyword">if</span> (reader.get(end) == target) &#123;</span><br><span class="line">            <span class="keyword">return</span> end;</span><br><span class="line">        &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">            <span class="keyword">return</span> -<span class="number">1</span>;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<h3 id="complexity"><a href="#complexity" class="headerlink" title="complexity"></a>complexity</h3><p>target 在index = n处出现</p>
+        <h2 id="iterative"><a href="#iterative" class="headerlink" title="iterative"></a>iterative</h2><h3 id="explanation"><a href="#explanation" class="headerlink" title="explanation"></a>explanation</h3><p>Range of int:(32bit) -2,147,483,648 ~ 2,147,483,647<br>从最小的负数转换成正数会integer overflow</p>
 <ol>
-<li>time: O(log(n))<br>如果是10倍10倍的跳<br>O(log_10(n) + log_2(10n))<br>如果是2倍2倍的跳<br>O(log_2(n) + log_2(2n))<br>如果是10倍10倍的跳更快</li>
-<li>space: O(1)</li>
+<li>判断n正负,<br>if n &lt; 0 , x = 1/ x, n = -(n + 1)<br>if n &gt;=0, no change</li>
+<li>iterative (we want log(n))<br>a) N-&gt; binary . eg. N= 9 = (1001b)<br>b) x^N = x^9 = x^(1001(2)) = x^(2^3 + 2^0) = x^(2^3) * x^(2^0)<br>c) tmp = (x^(2^0), x^(2^1), x^(2^2),x^(2^3))<br>d) 每次遇到二进制是1时，tmp乘到ans上<br>e) 最后处理负的情况</li>
 </ol>
+<h3 id="code"><a href="#code" class="headerlink" title="code"></a>code</h3><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Solution</span> </span>&#123;</span><br><span class="line">    <span class="comment">/*</span></span><br><span class="line"><span class="comment">     * @param x: the base number</span></span><br><span class="line"><span class="comment">     * @param n: the power number</span></span><br><span class="line"><span class="comment">     * @return: the result</span></span><br><span class="line"><span class="comment">     */</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">double</span> <span class="title">myPow</span><span class="params">(<span class="keyword">double</span> x, <span class="keyword">int</span> n)</span> </span>&#123;</span><br><span class="line">        <span class="comment">// write your code here</span></span><br><span class="line">        <span class="keyword">if</span> (x == <span class="number">0</span> &amp;&amp; n == <span class="number">0</span>) &#123;</span><br><span class="line">            <span class="keyword">throw</span> <span class="keyword">new</span> IllegalArgumentException(<span class="string">"0 to 0 is not legal!"</span>);</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        <span class="keyword">boolean</span> isNeg = <span class="keyword">false</span>;</span><br><span class="line">        <span class="keyword">if</span> (n &lt; <span class="number">0</span>) &#123;</span><br><span class="line">            isNeg = <span class="keyword">true</span>;</span><br><span class="line">            n = - (n + <span class="number">1</span>); <span class="comment">// avoid overflow</span></span><br><span class="line">            x= <span class="number">1</span> / x;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="comment">/*</span></span><br><span class="line"><span class="comment">        eg. x^N = x^9 = x^(1001(2)) = x^(2^3 + 2^0)</span></span><br><span class="line"><span class="comment">        = x^(2^3) . x^(2^0)</span></span><br><span class="line"><span class="comment">        tmp: (x, x^2 , x^ 4, x^8,...)</span></span><br><span class="line"><span class="comment">             (x^(2^0), x^(2^1), x(2^2),2^(2^3)...)</span></span><br><span class="line"><span class="comment">             当n那一位是1时，把tmp乘上ans去</span></span><br><span class="line"><span class="comment"></span></span><br><span class="line"><span class="comment"></span></span><br><span class="line"><span class="comment">        */</span></span><br><span class="line">        <span class="keyword">double</span> ans = <span class="number">1</span>, tmp = x;</span><br><span class="line">        <span class="keyword">while</span>(n != <span class="number">0</span>) &#123;</span><br><span class="line">            <span class="keyword">if</span> ((n &amp; <span class="number">1</span>) == <span class="number">1</span>) &#123;</span><br><span class="line">                ans *= tmp;</span><br><span class="line">            &#125;</span><br><span class="line">            tmp *= tmp;</span><br><span class="line">            n = n&gt;&gt;<span class="number">1</span>;<span class="comment">// n已经是正数，右移补0</span></span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">if</span> (isNeg) &#123;</span><br><span class="line">            ans = ans * x;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> ans;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h2 id="recursive"><a href="#recursive" class="headerlink" title="recursive"></a>recursive</h2><h3 id="explanation-1"><a href="#explanation-1" class="headerlink" title="explanation"></a>explanation</h3><p>if n is odd<br>x^n = x^(n/2) <em> x^(n/2) </em> x<br>if n is even<br>x^n = x^(n/2) * x^(n/2)</p>
+<h3 id="code-1"><a href="#code-1" class="headerlink" title="code"></a>code</h3><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Solution</span> </span>&#123;</span><br><span class="line">    <span class="comment">/*</span></span><br><span class="line"><span class="comment">     * @param x: the base number</span></span><br><span class="line"><span class="comment">     * @param n: the power number</span></span><br><span class="line"><span class="comment">     * @return: the result</span></span><br><span class="line"><span class="comment">     */</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">double</span> <span class="title">myPow</span><span class="params">(<span class="keyword">double</span> x, <span class="keyword">int</span> n)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">boolean</span> isNeg = <span class="keyword">false</span>;</span><br><span class="line">        <span class="keyword">if</span> (n &lt; <span class="number">0</span>) &#123;</span><br><span class="line">            isNeg = <span class="keyword">true</span>;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> isNeg ? (<span class="number">1</span>/x) * helper(x, n) : helper(x, n);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">private</span> <span class="keyword">double</span> <span class="title">helper</span><span class="params">(<span class="keyword">double</span> x, <span class="keyword">int</span> n)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">if</span> (n &lt; <span class="number">0</span>) &#123;</span><br><span class="line">            x = <span class="number">1</span> / x;</span><br><span class="line">            n = - (n + <span class="number">1</span>);</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">if</span> (n == <span class="number">0</span>) &#123; <span class="comment">// base case</span></span><br><span class="line">            <span class="keyword">return</span> <span class="number">1</span>;</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        <span class="keyword">double</span> tmp = helper(x, n/<span class="number">2</span>);</span><br><span class="line">        <span class="keyword">if</span> (n % <span class="number">2</span> == <span class="number">1</span>) &#123;</span><br><span class="line">            <span class="keyword">return</span> tmp * tmp * x;</span><br><span class="line">        &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">            <span class="keyword">return</span> tmp * tmp;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
       
     </div>
@@ -409,8 +406,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2018/04/27/460-Find-K-Closest-Elements/" rel="next" title="460. Find K Closest Elements">
-                <i class="fa fa-chevron-left"></i> 460. Find K Closest Elements
+              <a href="/2018/04/27/447-Search-in-a-Big-Sorted-Array/" rel="next" title="447. Search in a Big Sorted Array">
+                <i class="fa fa-chevron-left"></i> 447. Search in a Big Sorted Array
               </a>
             
           </div>
@@ -418,10 +415,6 @@
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2018/04/27/428-Pow-x-n/" rel="prev" title="428. Pow(x, n)">
-                428. Pow(x, n) <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
@@ -567,7 +560,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#explanation"><span class="nav-number">1.</span> <span class="nav-text">explanation</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#code"><span class="nav-number">2.</span> <span class="nav-text">code</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#complexity"><span class="nav-number">3.</span> <span class="nav-text">complexity</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#iterative"><span class="nav-number">1.</span> <span class="nav-text">iterative</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#explanation"><span class="nav-number">1.1.</span> <span class="nav-text">explanation</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#code"><span class="nav-number">1.2.</span> <span class="nav-text">code</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#recursive"><span class="nav-number">2.</span> <span class="nav-text">recursive</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#explanation-1"><span class="nav-number">2.1.</span> <span class="nav-text">explanation</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#code-1"><span class="nav-number">2.2.</span> <span class="nav-text">code</span></a></li></ol></li></ol></div>
             
 
           </div>
@@ -737,9 +730,9 @@
     
       <script type="text/javascript">
         var disqus_config = function () {
-          this.page.url = 'http://yoursite.com/2018/04/27/447-Search-in-a-Big-Sorted-Array/';
-          this.page.identifier = '2018/04/27/447-Search-in-a-Big-Sorted-Array/';
-          this.page.title = '447. Search in a Big Sorted Array';
+          this.page.url = 'http://yoursite.com/2018/04/27/428-Pow-x-n/';
+          this.page.identifier = '2018/04/27/428-Pow-x-n/';
+          this.page.title = '428. Pow(x, n)';
         };
         var d = document, s = d.createElement('script');
         s.src = 'https://musainlizzy.disqus.com/embed.js';
