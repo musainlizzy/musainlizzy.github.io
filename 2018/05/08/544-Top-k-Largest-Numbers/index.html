@@ -68,7 +68,7 @@
 
 
 
-  <meta name="keywords" content="lintcode,easy,Queue,Stack," />
+  <meta name="keywords" content="lintcode,medium,heap," />
 
 
 
@@ -79,18 +79,18 @@
 
 
 
-<meta name="description" content="explanation 用两个queue实现一个stack 一个queue 用来装item， 另一个queue用来在找最后一个item的时候，存储上面的item。  code12345678910111213141516171819202122232425262728293031323334353637383940414243444546474849505152535455565758596061">
-<meta name="keywords" content="lintcode,easy,Queue,Stack">
+<meta name="description" content="explanation应该是没有用heapify？  先建一个初始size为k的min heap 把array里的数一个个插进去，size&amp;gt;k的时候，pop最小的出去 剩下一个size为k的min heap，建一个result array，一个个把结果poll出来  code1234567891011121314151617181920212223242526public class Sol">
+<meta name="keywords" content="lintcode,medium,heap">
 <meta property="og:type" content="article">
-<meta property="og:title" content="494. Implement Stack by Two Queues">
-<meta property="og:url" content="http://yoursite.com/2018/05/05/494-Implement-Stack-by-Two-Queues/index.html">
+<meta property="og:title" content="544. Top k Largest Numbers ">
+<meta property="og:url" content="http://yoursite.com/2018/05/08/544-Top-k-Largest-Numbers/index.html">
 <meta property="og:site_name" content="Evelyn&#39;s Blog">
-<meta property="og:description" content="explanation 用两个queue实现一个stack 一个queue 用来装item， 另一个queue用来在找最后一个item的时候，存储上面的item。  code12345678910111213141516171819202122232425262728293031323334353637383940414243444546474849505152535455565758596061">
+<meta property="og:description" content="explanation应该是没有用heapify？  先建一个初始size为k的min heap 把array里的数一个个插进去，size&amp;gt;k的时候，pop最小的出去 剩下一个size为k的min heap，建一个result array，一个个把结果poll出来  code1234567891011121314151617181920212223242526public class Sol">
 <meta property="og:locale" content="en">
-<meta property="og:updated_time" content="2018-05-05T18:48:37.956Z">
+<meta property="og:updated_time" content="2018-05-08T18:04:50.365Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="494. Implement Stack by Two Queues">
-<meta name="twitter:description" content="explanation 用两个queue实现一个stack 一个queue 用来装item， 另一个queue用来在找最后一个item的时候，存储上面的item。  code12345678910111213141516171819202122232425262728293031323334353637383940414243444546474849505152535455565758596061">
+<meta name="twitter:title" content="544. Top k Largest Numbers ">
+<meta name="twitter:description" content="explanation应该是没有用heapify？  先建一个初始size为k的min heap 把array里的数一个个插进去，size&amp;gt;k的时候，pop最小的出去 剩下一个size为k的min heap，建一个result array，一个个把结果poll出来  code1234567891011121314151617181920212223242526public class Sol">
 
 
 
@@ -120,13 +120,13 @@
 
 
 
-  <link rel="canonical" href="http://yoursite.com/2018/05/05/494-Implement-Stack-by-Two-Queues/"/>
+  <link rel="canonical" href="http://yoursite.com/2018/05/08/544-Top-k-Largest-Numbers/"/>
 
 
 
 
 
-  <title>494. Implement Stack by Two Queues | Evelyn's Blog</title>
+  <title>544. Top k Largest Numbers  | Evelyn's Blog</title>
   
 
 
@@ -287,7 +287,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/05/05/494-Implement-Stack-by-Two-Queues/">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/05/08/544-Top-k-Largest-Numbers/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Evelyn">
@@ -304,7 +304,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">494. Implement Stack by Two Queues</h1>
+          <h1 class="post-title" itemprop="name headline">544. Top k Largest Numbers </h1>
         
 
         <div class="post-meta">
@@ -316,8 +316,8 @@
               
                 <span class="post-meta-item-text">Posted on</span>
               
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2018-05-05T17:43:32-04:00">
-                2018-05-05
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2018-05-08T13:59:19-07:00">
+                2018-05-08
               </time>
             
 
@@ -357,9 +357,9 @@
                 <span class="post-meta-item-icon">
                   <i class="fa fa-comment-o"></i>
                 </span>
-                <a href="/2018/05/05/494-Implement-Stack-by-Two-Queues/#comments" itemprop="discussionUrl">
+                <a href="/2018/05/08/544-Top-k-Largest-Numbers/#comments" itemprop="discussionUrl">
                   <span class="post-comments-count disqus-comment-count"
-                        data-disqus-identifier="2018/05/05/494-Implement-Stack-by-Two-Queues/" itemprop="commentCount"></span>
+                        data-disqus-identifier="2018/05/08/544-Top-k-Largest-Numbers/" itemprop="commentCount"></span>
                 </a>
               </span>
             
@@ -367,7 +367,7 @@
 
           
           
-             <span id="/2018/05/05/494-Implement-Stack-by-Two-Queues/" class="leancloud_visitors" data-flag-title="494. Implement Stack by Two Queues">
+             <span id="/2018/05/08/544-Top-k-Largest-Numbers/" class="leancloud_visitors" data-flag-title="544. Top k Largest Numbers ">
                <span class="post-meta-divider">|</span>
                <span class="post-meta-item-icon">
                  <i class="fa fa-eye"></i>
@@ -398,14 +398,16 @@
       
 
       
-        <h3 id="explanation"><a href="#explanation" class="headerlink" title="explanation"></a>explanation</h3><ol>
-<li>用两个queue实现一个stack</li>
-<li>一个queue 用来装item， 另一个queue用来在找最后一个item的时候，存储上面的item。</li>
+        <h3 id="explanation"><a href="#explanation" class="headerlink" title="explanation"></a>explanation</h3><p>应该是没有用heapify？</p>
+<ol>
+<li>先建一个初始size为k的min heap</li>
+<li>把array里的数一个个插进去，size&gt;k的时候，pop最小的出去</li>
+<li>剩下一个size为k的min heap，建一个result array，一个个把结果poll出来</li>
 </ol>
-<h3 id="code"><a href="#code" class="headerlink" title="code"></a>code</h3><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Stack</span> </span>&#123;</span><br><span class="line">    <span class="comment">/*</span></span><br><span class="line"><span class="comment">     * @param x: An integer</span></span><br><span class="line"><span class="comment">     * @return: nothing</span></span><br><span class="line"><span class="comment">     */</span></span><br><span class="line">    <span class="keyword">private</span> Queue&lt;Integer&gt; queue1;</span><br><span class="line">    <span class="keyword">private</span> Queue&lt;Integer&gt; queue2;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="title">Stack</span><span class="params">()</span> </span>&#123;</span><br><span class="line">        queue1 = <span class="keyword">new</span> LinkedList&lt;Integer&gt;();</span><br><span class="line">        queue2 = <span class="keyword">new</span> LinkedList&lt;Integer&gt;();</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">private</span> <span class="keyword">void</span> <span class="title">moveItem</span><span class="params">(Queue&lt;Integer&gt; que1, Queue&lt;Integer&gt; que2)</span> </span>&#123; <span class="comment">// 其实这个也不用传参</span></span><br><span class="line">        <span class="keyword">while</span> (que1.size() &gt; <span class="number">1</span>) &#123;</span><br><span class="line">            que2.offer(que1.poll());</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="function"><span class="keyword">private</span> <span class="keyword">void</span> <span class="title">swap</span><span class="params">()</span> </span>&#123; <span class="comment">// 不能通过传参实现！！！pass by value</span></span><br><span class="line">        Queue&lt;Integer&gt; temp = queue2;</span><br><span class="line">        queue2 = queue1;</span><br><span class="line">        queue1 = temp;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">push</span><span class="params">(<span class="keyword">int</span> x)</span> </span>&#123;</span><br><span class="line">        <span class="comment">// write your code here</span></span><br><span class="line">        queue1.offer(x);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="comment">/*</span></span><br><span class="line"><span class="comment">     * @return: nothing</span></span><br><span class="line"><span class="comment">     */</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">pop</span><span class="params">()</span> </span>&#123;</span><br><span class="line">        <span class="comment">// write your code here</span></span><br><span class="line">        <span class="comment">// queue 1 to queue 2 except last item</span></span><br><span class="line">        moveItem(queue1, queue2);</span><br><span class="line">        <span class="comment">// get last item</span></span><br><span class="line">        <span class="keyword">int</span> result = queue1.poll();</span><br><span class="line">        <span class="comment">// queue2 and queue 1 exchange</span></span><br><span class="line">        swap();</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="comment">/*</span></span><br><span class="line"><span class="comment">     * @return: An integer</span></span><br><span class="line"><span class="comment">     */</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">int</span> <span class="title">top</span><span class="params">()</span> </span>&#123;</span><br><span class="line">        <span class="comment">// write your code here</span></span><br><span class="line">        <span class="comment">//queue 1 to queue 2 except last item</span></span><br><span class="line">        moveItem(queue1, queue2);</span><br><span class="line">        <span class="comment">// get last item</span></span><br><span class="line">        <span class="keyword">int</span> result = queue1.poll();</span><br><span class="line">        <span class="comment">// put last item to queue 2</span></span><br><span class="line">        queue2.offer(result);</span><br><span class="line">        <span class="comment">// queue 2 and queue 1 exchange</span></span><br><span class="line">        swap();</span><br><span class="line">        <span class="keyword">return</span> result;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="comment">/*</span></span><br><span class="line"><span class="comment">     * @return: True if the stack is empty</span></span><br><span class="line"><span class="comment">     */</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">boolean</span> <span class="title">isEmpty</span><span class="params">()</span> </span>&#123;</span><br><span class="line">        <span class="comment">// write your code here</span></span><br><span class="line">        <span class="comment">// queue1.isEmpty</span></span><br><span class="line">        <span class="keyword">return</span> queue1.isEmpty();</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<h3 id="complexity"><a href="#complexity" class="headerlink" title="complexity"></a>complexity</h3><ol>
-<li>time: push O(1), pop O(n), top O(n), isEmpty O(1)</li>
-<li>space : O(n)</li>
+<h3 id="code"><a href="#code" class="headerlink" title="code"></a>code</h3><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Solution</span> </span>&#123;</span><br><span class="line">    <span class="comment">/**</span></span><br><span class="line"><span class="comment">     * <span class="doctag">@param</span> nums: an integer array</span></span><br><span class="line"><span class="comment">     * <span class="doctag">@param</span> k: An integer</span></span><br><span class="line"><span class="comment">     * <span class="doctag">@return</span>: the top k largest numbers in array</span></span><br><span class="line"><span class="comment">     */</span></span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">int</span>[] topk(<span class="keyword">int</span>[] nums, <span class="keyword">int</span> k) &#123;</span><br><span class="line">        <span class="comment">// write your code here</span></span><br><span class="line">        <span class="comment">// assume nums.size &gt;= k</span></span><br><span class="line">        PriorityQueue&lt;Integer&gt; minHeap = <span class="keyword">new</span> PriorityQueue&lt;&gt;(k);</span><br><span class="line">        <span class="keyword">for</span> (<span class="keyword">int</span> num : nums) &#123;</span><br><span class="line">            minHeap.offer(num);</span><br><span class="line">            <span class="keyword">if</span> (minHeap.size() &gt; k) &#123;</span><br><span class="line">                minHeap.poll();</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        <span class="comment">// iterate the min heap</span></span><br><span class="line">        <span class="keyword">int</span>[] result = <span class="keyword">new</span> <span class="keyword">int</span>[k];</span><br><span class="line">        <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; result.length; i++) &#123;</span><br><span class="line">            result[--k] = minHeap.poll();</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        <span class="keyword">return</span> result;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h3 id="time-complexity"><a href="#time-complexity" class="headerlink" title="time complexity"></a>time complexity</h3><ol>
+<li>time : O(nlogk)</li>
+<li>space: O(k)</li>
 </ol>
 
       
@@ -426,11 +428,9 @@
           
             <a href="/tags/lintcode/" rel="tag"># lintcode</a>
           
-            <a href="/tags/easy/" rel="tag"># easy</a>
+            <a href="/tags/medium/" rel="tag"># medium</a>
           
-            <a href="/tags/Queue/" rel="tag"># Queue</a>
-          
-            <a href="/tags/Stack/" rel="tag"># Stack</a>
+            <a href="/tags/heap/" rel="tag"># heap</a>
           
         </div>
       
@@ -443,8 +443,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2018/05/04/642-Moving-Average-from-Data-Stream/" rel="next" title="642. Moving Average from Data Stream ">
-                <i class="fa fa-chevron-left"></i> 642. Moving Average from Data Stream 
+              <a href="/2018/05/05/612-K-Closest-Points/" rel="next" title="612. K Closest Points">
+                <i class="fa fa-chevron-left"></i> 612. K Closest Points
               </a>
             
           </div>
@@ -452,10 +452,6 @@
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2018/05/05/209-First-Unique-Character-in-a-String/" rel="prev" title="209. First Unique Character in a String">
-                209. First Unique Character in a String <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
@@ -601,7 +597,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#explanation"><span class="nav-number">1.</span> <span class="nav-text">explanation</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#code"><span class="nav-number">2.</span> <span class="nav-text">code</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#complexity"><span class="nav-number">3.</span> <span class="nav-text">complexity</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#explanation"><span class="nav-number">1.</span> <span class="nav-text">explanation</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#code"><span class="nav-number">2.</span> <span class="nav-text">code</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#time-complexity"><span class="nav-number">3.</span> <span class="nav-text">time complexity</span></a></li></ol></div>
             
 
           </div>
@@ -771,9 +767,9 @@
     
       <script type="text/javascript">
         var disqus_config = function () {
-          this.page.url = 'http://yoursite.com/2018/05/05/494-Implement-Stack-by-Two-Queues/';
-          this.page.identifier = '2018/05/05/494-Implement-Stack-by-Two-Queues/';
-          this.page.title = '494. Implement Stack by Two Queues';
+          this.page.url = 'http://yoursite.com/2018/05/08/544-Top-k-Largest-Numbers/';
+          this.page.identifier = '2018/05/08/544-Top-k-Largest-Numbers/';
+          this.page.title = '544. Top k Largest Numbers ';
         };
         var d = document, s = d.createElement('script');
         s.src = 'https://musainlizzy.disqus.com/embed.js';
