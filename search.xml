@@ -3,6 +3,31 @@
   
     
     <entry>
+      <title>61. Rotate List</title>
+      <link href="/2018/05/10/61-Rotate-List/"/>
+      <url>/2018/05/10/61-Rotate-List/</url>
+      <content type="html"><![CDATA[<h3 id="explanation"><a href="#explanation" class="headerlink" title="explanation"></a>explanation</h3><ol><li>算出length， k = k % len </li><li>tail 连到head</li><li>找到新tail， tail.next = null</li><li>return 新head</li></ol><h3 id="code"><a href="#code" class="headerlink" title="code"></a>code</h3><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * Definition for singly-linked list.</span></span><br><span class="line"><span class="comment"> * public class ListNode &#123;</span></span><br><span class="line"><span class="comment"> *     int val;</span></span><br><span class="line"><span class="comment"> *     ListNode next;</span></span><br><span class="line"><span class="comment"> *     ListNode(int x) &#123; val = x; &#125;</span></span><br><span class="line"><span class="comment"> * &#125;</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span> </span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> ListNode <span class="title">rotateRight</span><span class="params">(ListNode head, <span class="keyword">int</span> k)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">if</span> (head == <span class="keyword">null</span>) &#123;</span><br><span class="line">            <span class="keyword">return</span> <span class="keyword">null</span>;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="comment">// get length, k = k%len, len - k -&gt; null, final node-&gt;n0</span></span><br><span class="line">        <span class="keyword">int</span> len = <span class="number">1</span>;</span><br><span class="line">        ListNode curt = head;</span><br><span class="line">        <span class="keyword">while</span> (curt.next != <span class="keyword">null</span>) &#123;</span><br><span class="line">            len++;</span><br><span class="line">            curt = curt.next;</span><br><span class="line">        &#125;</span><br><span class="line">        curt.next = head;</span><br><span class="line"></span><br><span class="line">        k = k % len;</span><br><span class="line">       <span class="comment">// 断开tail, return head</span></span><br><span class="line">        ListNode tail = head;</span><br><span class="line">        <span class="keyword">int</span> count = len - k;</span><br><span class="line">        <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">1</span>; i &lt; count; i++) &#123;</span><br><span class="line">            tail = tail.next;</span><br><span class="line">        &#125;</span><br><span class="line">        head = tail.next;</span><br><span class="line">        tail.next = <span class="keyword">null</span>;</span><br><span class="line"></span><br><span class="line">        <span class="keyword">return</span> head;</span><br><span class="line"></span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>]]></content>
+      
+      <categories>
+          
+          <category> algorithms </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> Linked List </tag>
+            
+            <tag> medium </tag>
+            
+            <tag> leetcode </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    <entry>
       <title>25. Reverse Nodes in k-Group</title>
       <link href="/2018/05/10/25-Reverse-Nodes-in-k-Group/"/>
       <url>/2018/05/10/25-Reverse-Nodes-in-k-Group/</url>
@@ -19,7 +44,7 @@
             
             <tag> Linked List </tag>
             
-            <tag> lintcode </tag>
+            <tag> leetcode </tag>
             
             <tag> hard </tag>
             
