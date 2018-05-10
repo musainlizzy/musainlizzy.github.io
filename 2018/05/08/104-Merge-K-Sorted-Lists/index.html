@@ -68,7 +68,7 @@
 
 
 
-  <meta name="keywords" content="heap,Linked List,merge sort,lintcode,medium," />
+  <meta name="keywords" content="Linked List,lintcode,medium,heap,merge sort," />
 
 
 
@@ -80,7 +80,7 @@
 
 
 <meta name="description" content="explanation method 1: heapa) corner caseb) build min heapc) add heads of each lists into heapd) curt =poll() and add curt.next into heape) time complexity: O(Nlog(N)), N is the number of nodes  code12">
-<meta name="keywords" content="heap,Linked List,merge sort,lintcode,medium">
+<meta name="keywords" content="Linked List,lintcode,medium,heap,merge sort">
 <meta property="og:type" content="article">
 <meta property="og:title" content="104. Merge K Sorted Lists">
 <meta property="og:url" content="http://yoursite.com/2018/05/08/104-Merge-K-Sorted-Lists/index.html">
@@ -239,26 +239,22 @@
   
     <div class="site-search">
       
-  
-  <div class="algolia-popup popup search-popup">
-    <div class="algolia-search">
-      <div class="algolia-search-input-icon">
-        <i class="fa fa-search"></i>
-      </div>
-      <div class="algolia-search-input" id="algolia-search-input"></div>
-    </div>
-
-    <div class="algolia-results">
-      <div id="algolia-stats"></div>
-      <div id="algolia-hits"></div>
-      <div id="algolia-pagination" class="algolia-pagination"></div>
-    </div>
-
+  <div class="popup search-popup local-search-popup">
+  <div class="local-search-header clearfix">
+    <span class="search-icon">
+      <i class="fa fa-search"></i>
+    </span>
     <span class="popup-btn-close">
       <i class="fa fa-times-circle"></i>
     </span>
+    <div class="local-search-input-wrapper">
+      <input autocomplete="off"
+             placeholder="Searching..." spellcheck="false"
+             type="text" id="local-search-input">
+    </div>
   </div>
-
+  <div id="local-search-result"></div>
+</div>
 
 
 
@@ -423,15 +419,15 @@
       
         <div class="post-tags">
           
-            <a href="/tags/heap/" rel="tag"># heap</a>
-          
             <a href="/tags/Linked-List/" rel="tag"># Linked List</a>
-          
-            <a href="/tags/merge-sort/" rel="tag"># merge sort</a>
           
             <a href="/tags/lintcode/" rel="tag"># lintcode</a>
           
             <a href="/tags/medium/" rel="tag"># medium</a>
+          
+            <a href="/tags/heap/" rel="tag"># heap</a>
+          
+            <a href="/tags/merge-sort/" rel="tag"># merge sort</a>
           
         </div>
       
@@ -1129,19 +1125,6 @@
   </script>
 
 
-
-
-  
-  
-  
-  <link rel="stylesheet" href="/lib/algolia-instant-search/instantsearch.min.css">
-
-  
-  
-  <script src="/lib/algolia-instant-search/instantsearch.min.js"></script>
-  
-
-  <script src="/js/src/algolia-search.js?v=5.1.4"></script>
 
 
 

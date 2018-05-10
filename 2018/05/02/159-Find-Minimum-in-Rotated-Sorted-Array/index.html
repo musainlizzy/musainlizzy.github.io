@@ -68,7 +68,7 @@
 
 
 
-  <meta name="keywords" content="lintcode,medium,binary search," />
+  <meta name="keywords" content="lintcode,binary search,medium," />
 
 
 
@@ -80,7 +80,7 @@
 
 
 <meta name="description" content="explanation没有duplicate  不能和nums[0]比如果nums[mid] &amp;lt; nums[0], 最小在mid左边(include)?如果nums[mid] &amp;gt; nums[0], 最小在mid右边或者左边(无法判断)  要和nums[length-1]比nums[mid] != nums[length - 1]if nums[mid] &amp;lt; nums[length">
-<meta name="keywords" content="lintcode,medium,binary search">
+<meta name="keywords" content="lintcode,binary search,medium">
 <meta property="og:type" content="article">
 <meta property="og:title" content="159. Find Minimum in Rotated Sorted Array">
 <meta property="og:url" content="http://yoursite.com/2018/05/02/159-Find-Minimum-in-Rotated-Sorted-Array/index.html">
@@ -239,26 +239,22 @@
   
     <div class="site-search">
       
-  
-  <div class="algolia-popup popup search-popup">
-    <div class="algolia-search">
-      <div class="algolia-search-input-icon">
-        <i class="fa fa-search"></i>
-      </div>
-      <div class="algolia-search-input" id="algolia-search-input"></div>
-    </div>
-
-    <div class="algolia-results">
-      <div id="algolia-stats"></div>
-      <div id="algolia-hits"></div>
-      <div id="algolia-pagination" class="algolia-pagination"></div>
-    </div>
-
+  <div class="popup search-popup local-search-popup">
+  <div class="local-search-header clearfix">
+    <span class="search-icon">
+      <i class="fa fa-search"></i>
+    </span>
     <span class="popup-btn-close">
       <i class="fa fa-times-circle"></i>
     </span>
+    <div class="local-search-input-wrapper">
+      <input autocomplete="off"
+             placeholder="Searching..." spellcheck="false"
+             type="text" id="local-search-input">
+    </div>
   </div>
-
+  <div id="local-search-result"></div>
+</div>
 
 
 
@@ -429,9 +425,9 @@
           
             <a href="/tags/lintcode/" rel="tag"># lintcode</a>
           
-            <a href="/tags/medium/" rel="tag"># medium</a>
-          
             <a href="/tags/binary-search/" rel="tag"># binary search</a>
+          
+            <a href="/tags/medium/" rel="tag"># medium</a>
           
         </div>
       
@@ -1129,19 +1125,6 @@
   </script>
 
 
-
-
-  
-  
-  
-  <link rel="stylesheet" href="/lib/algolia-instant-search/instantsearch.min.css">
-
-  
-  
-  <script src="/lib/algolia-instant-search/instantsearch.min.js"></script>
-  
-
-  <script src="/js/src/algolia-search.js?v=5.1.4"></script>
 
 
 
