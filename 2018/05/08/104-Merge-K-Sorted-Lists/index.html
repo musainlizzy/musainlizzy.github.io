@@ -68,7 +68,7 @@
 
 
 
-  <meta name="keywords" content="lintcode,medium,heap,merge sort," />
+  <meta name="keywords" content="heap,Linked List,merge sort,lintcode,medium," />
 
 
 
@@ -80,14 +80,14 @@
 
 
 <meta name="description" content="explanation method 1: heapa) corner caseb) build min heapc) add heads of each lists into heapd) curt =poll() and add curt.next into heape) time complexity: O(Nlog(N)), N is the number of nodes  code12">
-<meta name="keywords" content="lintcode,medium,heap,merge sort">
+<meta name="keywords" content="heap,Linked List,merge sort,lintcode,medium">
 <meta property="og:type" content="article">
 <meta property="og:title" content="104. Merge K Sorted Lists">
 <meta property="og:url" content="http://yoursite.com/2018/05/08/104-Merge-K-Sorted-Lists/index.html">
 <meta property="og:site_name" content="Evelyn&#39;s Blog">
 <meta property="og:description" content="explanation method 1: heapa) corner caseb) build min heapc) add heads of each lists into heapd) curt =poll() and add curt.next into heape) time complexity: O(Nlog(N)), N is the number of nodes  code12">
 <meta property="og:locale" content="en">
-<meta property="og:updated_time" content="2018-05-08T22:03:25.264Z">
+<meta property="og:updated_time" content="2018-05-09T18:31:26.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="104. Merge K Sorted Lists">
 <meta name="twitter:description" content="explanation method 1: heapa) corner caseb) build min heapc) add heads of each lists into heapd) curt =poll() and add curt.next into heape) time complexity: O(Nlog(N)), N is the number of nodes  code12">
@@ -239,22 +239,26 @@
   
     <div class="site-search">
       
-  <div class="popup search-popup local-search-popup">
-  <div class="local-search-header clearfix">
-    <span class="search-icon">
-      <i class="fa fa-search"></i>
-    </span>
+  
+  <div class="algolia-popup popup search-popup">
+    <div class="algolia-search">
+      <div class="algolia-search-input-icon">
+        <i class="fa fa-search"></i>
+      </div>
+      <div class="algolia-search-input" id="algolia-search-input"></div>
+    </div>
+
+    <div class="algolia-results">
+      <div id="algolia-stats"></div>
+      <div id="algolia-hits"></div>
+      <div id="algolia-pagination" class="algolia-pagination"></div>
+    </div>
+
     <span class="popup-btn-close">
       <i class="fa fa-times-circle"></i>
     </span>
-    <div class="local-search-input-wrapper">
-      <input autocomplete="off"
-             placeholder="Searching..." spellcheck="false"
-             type="text" id="local-search-input">
-    </div>
   </div>
-  <div id="local-search-result"></div>
-</div>
+
 
 
 
@@ -419,13 +423,15 @@
       
         <div class="post-tags">
           
+            <a href="/tags/heap/" rel="tag"># heap</a>
+          
+            <a href="/tags/Linked-List/" rel="tag"># Linked List</a>
+          
+            <a href="/tags/merge-sort/" rel="tag"># merge sort</a>
+          
             <a href="/tags/lintcode/" rel="tag"># lintcode</a>
           
             <a href="/tags/medium/" rel="tag"># medium</a>
-          
-            <a href="/tags/heap/" rel="tag"># heap</a>
-          
-            <a href="/tags/merge-sort/" rel="tag"># merge sort</a>
           
         </div>
       
@@ -541,7 +547,7 @@
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">23</span>
+                  <span class="site-state-item-count">24</span>
                   <span class="site-state-item-name">posts</span>
                 </a>
               </div>
@@ -810,7 +816,7 @@
     var isfetched = false;
     var isXml = true;
     // Search DB path;
-    var search_path = "";
+    var search_path = "search.xml";
     if (search_path.length === 0) {
       search_path = "search.xml";
     } else if (/json$/i.test(search_path)) {
@@ -1123,6 +1129,19 @@
   </script>
 
 
+
+
+  
+  
+  
+  <link rel="stylesheet" href="/lib/algolia-instant-search/instantsearch.min.css">
+
+  
+  
+  <script src="/lib/algolia-instant-search/instantsearch.min.js"></script>
+  
+
+  <script src="/js/src/algolia-search.js?v=5.1.4"></script>
 
 
 

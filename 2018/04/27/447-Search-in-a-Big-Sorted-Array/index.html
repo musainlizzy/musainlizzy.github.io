@@ -68,7 +68,7 @@
 
 
 
-  <meta name="keywords" content="lintcode,binary search,medium," />
+  <meta name="keywords" content="lintcode,medium,binary search," />
 
 
 
@@ -80,7 +80,7 @@
 
 
 <meta name="description" content="explanation find range时，从index = 1开始 比较nums[index-1] 和 target区别 这道题是find first occurrence  code1234567891011121314151617181920212223242526272829303132public class Solution &amp;#123;    /*     * @param re">
-<meta name="keywords" content="lintcode,binary search,medium">
+<meta name="keywords" content="lintcode,medium,binary search">
 <meta property="og:type" content="article">
 <meta property="og:title" content="447. Search in a Big Sorted Array">
 <meta property="og:url" content="http://yoursite.com/2018/04/27/447-Search-in-a-Big-Sorted-Array/index.html">
@@ -239,22 +239,26 @@
   
     <div class="site-search">
       
-  <div class="popup search-popup local-search-popup">
-  <div class="local-search-header clearfix">
-    <span class="search-icon">
-      <i class="fa fa-search"></i>
-    </span>
+  
+  <div class="algolia-popup popup search-popup">
+    <div class="algolia-search">
+      <div class="algolia-search-input-icon">
+        <i class="fa fa-search"></i>
+      </div>
+      <div class="algolia-search-input" id="algolia-search-input"></div>
+    </div>
+
+    <div class="algolia-results">
+      <div id="algolia-stats"></div>
+      <div id="algolia-hits"></div>
+      <div id="algolia-pagination" class="algolia-pagination"></div>
+    </div>
+
     <span class="popup-btn-close">
       <i class="fa fa-times-circle"></i>
     </span>
-    <div class="local-search-input-wrapper">
-      <input autocomplete="off"
-             placeholder="Searching..." spellcheck="false"
-             type="text" id="local-search-input">
-    </div>
   </div>
-  <div id="local-search-result"></div>
-</div>
+
 
 
 
@@ -428,9 +432,9 @@
           
             <a href="/tags/lintcode/" rel="tag"># lintcode</a>
           
-            <a href="/tags/binary-search/" rel="tag"># binary search</a>
-          
             <a href="/tags/medium/" rel="tag"># medium</a>
+          
+            <a href="/tags/binary-search/" rel="tag"># binary search</a>
           
         </div>
       
@@ -546,7 +550,7 @@
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">23</span>
+                  <span class="site-state-item-count">24</span>
                   <span class="site-state-item-name">posts</span>
                 </a>
               </div>
@@ -815,7 +819,7 @@
     var isfetched = false;
     var isXml = true;
     // Search DB path;
-    var search_path = "";
+    var search_path = "search.xml";
     if (search_path.length === 0) {
       search_path = "search.xml";
     } else if (/json$/i.test(search_path)) {
@@ -1128,6 +1132,19 @@
   </script>
 
 
+
+
+  
+  
+  
+  <link rel="stylesheet" href="/lib/algolia-instant-search/instantsearch.min.css">
+
+  
+  
+  <script src="/lib/algolia-instant-search/instantsearch.min.js"></script>
+  
+
+  <script src="/js/src/algolia-search.js?v=5.1.4"></script>
 
 
 
