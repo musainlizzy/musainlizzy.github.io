@@ -3,10 +3,19 @@
   
     
     <entry>
+      <title>138. Copy List with Random Pointer</title>
+      <link href="/2018/05/11/138-Copy-List-with-Random-Pointer/"/>
+      <url>/2018/05/11/138-Copy-List-with-Random-Pointer/</url>
+      <content type="html"><![CDATA[<h3 id="code"><a href="#code" class="headerlink" title="code"></a>code</h3><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * Definition for singly-linked list with a random pointer.</span></span><br><span class="line"><span class="comment"> * class RandomListNode &#123;</span></span><br><span class="line"><span class="comment"> *     int label;</span></span><br><span class="line"><span class="comment"> *     RandomListNode next, random;</span></span><br><span class="line"><span class="comment"> *     RandomListNode(int x) &#123; this.label = x; &#125;</span></span><br><span class="line"><span class="comment"> * &#125;;</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Solution</span> </span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> RandomListNode <span class="title">copyRandomList</span><span class="params">(RandomListNode head)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">if</span> (head == <span class="keyword">null</span>) &#123;</span><br><span class="line">            <span class="keyword">return</span> <span class="keyword">null</span>;</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        Map&lt;RandomListNode, RandomListNode&gt; map = <span class="keyword">new</span> HashMap&lt;&gt;();</span><br><span class="line">        RandomListNode dummy = <span class="keyword">new</span> RandomListNode(<span class="number">0</span>);</span><br><span class="line">        RandomListNode prev = dummy;</span><br><span class="line">        <span class="keyword">while</span> (head != <span class="keyword">null</span>) &#123;</span><br><span class="line">            RandomListNode newNode;</span><br><span class="line">            <span class="keyword">if</span> (map.containsKey(head)) &#123;</span><br><span class="line">                newNode = map.get(head);</span><br><span class="line"></span><br><span class="line">            &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">                newNode = <span class="keyword">new</span> RandomListNode(head.label);</span><br><span class="line">                map.put(head, newNode); <span class="comment">// we add the real node to the map, even if head point to diff nodes, it won't change.!!!!</span></span><br><span class="line">            &#125;</span><br><span class="line"></span><br><span class="line">            RandomListNode oldRandom = head.random;</span><br><span class="line">            <span class="keyword">if</span> (oldRandom != <span class="keyword">null</span>) &#123;</span><br><span class="line">                RandomListNode newRandom;</span><br><span class="line">                <span class="keyword">if</span> (map.containsKey(oldRandom))&#123;</span><br><span class="line">                    newRandom = map.get(head.random);</span><br><span class="line">                &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">                    newRandom = <span class="keyword">new</span> RandomListNode(oldRandom.label);</span><br><span class="line">                    map.put(oldRandom, newRandom);</span><br><span class="line">                &#125;            </span><br><span class="line">                newNode.random = newRandom;</span><br><span class="line">            &#125;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line">            prev.next = newNode;</span><br><span class="line">            prev = newNode; <span class="comment">// prev 赋给新node！！！</span></span><br><span class="line">            head = head.next;</span><br><span class="line"></span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> dummy.next;</span><br><span class="line"></span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>]]></content>
+      
+      
+    </entry>
+    
+    <entry>
       <title>63. Search in Rotated Sorted Array II</title>
       <link href="/2018/05/11/63-Search-in-Rotated-Sorted-Array-II/"/>
       <url>/2018/05/11/63-Search-in-Rotated-Sorted-Array-II/</url>
-      <content type="html"><![CDATA[<h3 id="explanation"><a href="#explanation" class="headerlink" title="explanation"></a>explanation</h3><ol><li>这道题作为上道题的follow up，用binary search的worse case是O(n)</li><li>所以完全go through 真个数组，一个一个check</li></ol><h3 id="code"><a href="#code" class="headerlink" title="code"></a>code</h3><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Solution</span> </span>&#123;</span><br><span class="line">    <span class="comment">// 这个问题在面试中不会让实现完整程序</span></span><br><span class="line">    <span class="comment">// 只需要举出能够最坏情况的数据是 [1,1,1,1... 1] 里有一个0即可。</span></span><br><span class="line">    <span class="comment">// 在这种情况下是无法使用二分法的，复杂度是O(n)</span></span><br><span class="line">    <span class="comment">// 因此写个for循环最坏也是O(n)，那就写个for循环就好了</span></span><br><span class="line">    <span class="comment">//  如果你觉得，不是每个情况都是最坏情况，你想用二分法解决不是最坏情况的情况，那你就写一个二分吧。</span></span><br><span class="line">    <span class="comment">//  反正面试考的不是你在这个题上会不会用二分法。这个题的考点是你想不想得到最坏情况。</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">boolean</span> <span class="title">search</span><span class="params">(<span class="keyword">int</span>[] A, <span class="keyword">int</span> target)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; A.length; i ++) &#123;</span><br><span class="line">            <span class="keyword">if</span> (A[i] == target) &#123;</span><br><span class="line">                <span class="keyword">return</span> <span class="keyword">true</span>;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> <span class="keyword">false</span>;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Solution</span> </span>&#123;</span><br><span class="line">    <span class="comment">/**</span></span><br><span class="line"><span class="comment">     * <span class="doctag">@param</span> A: an integer ratated sorted array and duplicates are allowed</span></span><br><span class="line"><span class="comment">     * <span class="doctag">@param</span> target: An integer</span></span><br><span class="line"><span class="comment">     * <span class="doctag">@return</span>: a boolean</span></span><br><span class="line"><span class="comment">     */</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">boolean</span> <span class="title">search</span><span class="params">(<span class="keyword">int</span>[] A, <span class="keyword">int</span> target)</span> </span>&#123;</span><br><span class="line">        <span class="comment">// write your code here</span></span><br><span class="line">        <span class="keyword">if</span> (A == <span class="keyword">null</span> || A.length == <span class="number">0</span>) &#123;</span><br><span class="line">            <span class="keyword">return</span> <span class="keyword">false</span>;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">int</span> start = <span class="number">0</span>, end = A.length - <span class="number">1</span>;</span><br><span class="line"></span><br><span class="line">        <span class="keyword">while</span> (start + <span class="number">1</span> &lt; end) &#123;</span><br><span class="line">            <span class="keyword">int</span> mid = start + (end - start) / <span class="number">2</span>;</span><br><span class="line">            <span class="keyword">if</span> (A[start] == A[mid]) &#123; <span class="comment">// 说明start 后有dup，删掉start 不影响</span></span><br><span class="line">                start++;</span><br><span class="line">            &#125; <span class="keyword">else</span> <span class="keyword">if</span> (A[end] == A[mid]) &#123;<span class="comment">// 说明end 前有dup，删掉end 不影响</span></span><br><span class="line">                end--;</span><br><span class="line">            &#125; <span class="keyword">else</span> <span class="keyword">if</span> (A[mid] &gt; A[start]) &#123; <span class="comment">// same line with start</span></span><br><span class="line">                <span class="keyword">if</span> (target &gt;= A[start] &amp;&amp; target &lt;= A[mid]) &#123;</span><br><span class="line">                    end = mid;</span><br><span class="line">                &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">                    start = mid;</span><br><span class="line">                &#125;</span><br><span class="line">            &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">                <span class="keyword">if</span> (target &lt; A[end] &amp;&amp; target &gt;= A[mid]) &#123;</span><br><span class="line">                    start = mid;</span><br><span class="line">                &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">                    end = mid;</span><br><span class="line">                &#125;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">if</span> (A[start] == target || A[end] == target) &#123;</span><br><span class="line">            <span class="keyword">return</span> <span class="keyword">true</span>;</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        <span class="keyword">return</span> <span class="keyword">false</span>;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>]]></content>
+      <content type="html"><![CDATA[<h3 id="explanation"><a href="#explanation" class="headerlink" title="explanation"></a>explanation</h3><ol><li>这道题作为上道题的follow up，用binary search的worse case是O(n)</li><li>所以完全可以go through 整个数组，一个一个check</li></ol><h3 id="code"><a href="#code" class="headerlink" title="code"></a>code</h3><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Solution</span> </span>&#123;</span><br><span class="line">    <span class="comment">// 这个问题在面试中不会让实现完整程序</span></span><br><span class="line">    <span class="comment">// 只需要举出能够最坏情况的数据是 [1,1,1,1... 1] 里有一个0即可。</span></span><br><span class="line">    <span class="comment">// 在这种情况下是无法使用二分法的，复杂度是O(n)</span></span><br><span class="line">    <span class="comment">// 因此写个for循环最坏也是O(n)，那就写个for循环就好了</span></span><br><span class="line">    <span class="comment">//  如果你觉得，不是每个情况都是最坏情况，你想用二分法解决不是最坏情况的情况，那你就写一个二分吧。</span></span><br><span class="line">    <span class="comment">//  反正面试考的不是你在这个题上会不会用二分法。这个题的考点是你想不想得到最坏情况。</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">boolean</span> <span class="title">search</span><span class="params">(<span class="keyword">int</span>[] A, <span class="keyword">int</span> target)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; A.length; i ++) &#123;</span><br><span class="line">            <span class="keyword">if</span> (A[i] == target) &#123;</span><br><span class="line">                <span class="keyword">return</span> <span class="keyword">true</span>;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> <span class="keyword">false</span>;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Solution</span> </span>&#123;</span><br><span class="line">    <span class="comment">/**</span></span><br><span class="line"><span class="comment">     * <span class="doctag">@param</span> A: an integer ratated sorted array and duplicates are allowed</span></span><br><span class="line"><span class="comment">     * <span class="doctag">@param</span> target: An integer</span></span><br><span class="line"><span class="comment">     * <span class="doctag">@return</span>: a boolean</span></span><br><span class="line"><span class="comment">     */</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">boolean</span> <span class="title">search</span><span class="params">(<span class="keyword">int</span>[] A, <span class="keyword">int</span> target)</span> </span>&#123;</span><br><span class="line">        <span class="comment">// write your code here</span></span><br><span class="line">        <span class="keyword">if</span> (A == <span class="keyword">null</span> || A.length == <span class="number">0</span>) &#123;</span><br><span class="line">            <span class="keyword">return</span> <span class="keyword">false</span>;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">int</span> start = <span class="number">0</span>, end = A.length - <span class="number">1</span>;</span><br><span class="line"></span><br><span class="line">        <span class="keyword">while</span> (start + <span class="number">1</span> &lt; end) &#123;</span><br><span class="line">            <span class="keyword">int</span> mid = start + (end - start) / <span class="number">2</span>;</span><br><span class="line">            <span class="keyword">if</span> (A[start] == A[mid]) &#123; <span class="comment">// 说明start 后有dup，删掉start 不影响</span></span><br><span class="line">                start++;</span><br><span class="line">            &#125; <span class="keyword">else</span> <span class="keyword">if</span> (A[end] == A[mid]) &#123;<span class="comment">// 说明end 前有dup，删掉end 不影响</span></span><br><span class="line">                end--;</span><br><span class="line">            &#125; <span class="keyword">else</span> <span class="keyword">if</span> (A[mid] &gt; A[start]) &#123; <span class="comment">// same line with start</span></span><br><span class="line">                <span class="keyword">if</span> (target &gt;= A[start] &amp;&amp; target &lt;= A[mid]) &#123;</span><br><span class="line">                    end = mid;</span><br><span class="line">                &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">                    start = mid;</span><br><span class="line">                &#125;</span><br><span class="line">            &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">                <span class="keyword">if</span> (target &lt; A[end] &amp;&amp; target &gt;= A[mid]) &#123;</span><br><span class="line">                    start = mid;</span><br><span class="line">                &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">                    end = mid;</span><br><span class="line">                &#125;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">if</span> (A[start] == target || A[end] == target) &#123;</span><br><span class="line">            <span class="keyword">return</span> <span class="keyword">true</span>;</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        <span class="keyword">return</span> <span class="keyword">false</span>;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>]]></content>
       
       <categories>
           
@@ -17,11 +26,11 @@
       
         <tags>
             
+            <tag> binary search </tag>
+            
             <tag> lintcode </tag>
             
             <tag> medium </tag>
-            
-            <tag> binary search </tag>
             
         </tags>
       
@@ -42,9 +51,9 @@
       
         <tags>
             
-            <tag> Linked List </tag>
-            
             <tag> medium </tag>
+            
+            <tag> Linked List </tag>
             
             <tag> leetcode </tag>
             
@@ -117,9 +126,9 @@
       
         <tags>
             
-            <tag> Linked List </tag>
-            
             <tag> lintcode </tag>
+            
+            <tag> Linked List </tag>
             
             <tag> HashMap </tag>
             
@@ -198,15 +207,15 @@
       
         <tags>
             
-            <tag> heap </tag>
-            
-            <tag> Linked List </tag>
-            
-            <tag> merge sort </tag>
-            
             <tag> lintcode </tag>
             
             <tag> medium </tag>
+            
+            <tag> Linked List </tag>
+            
+            <tag> heap </tag>
+            
+            <tag> merge sort </tag>
             
         </tags>
       
@@ -227,11 +236,11 @@
       
         <tags>
             
-            <tag> heap </tag>
-            
             <tag> lintcode </tag>
             
             <tag> medium </tag>
+            
+            <tag> heap </tag>
             
         </tags>
       
@@ -252,11 +261,11 @@
       
         <tags>
             
-            <tag> heap </tag>
-            
             <tag> lintcode </tag>
             
             <tag> medium </tag>
+            
+            <tag> heap </tag>
             
         </tags>
       
@@ -381,11 +390,11 @@
       
         <tags>
             
+            <tag> binary search </tag>
+            
             <tag> lintcode </tag>
             
             <tag> medium </tag>
-            
-            <tag> binary search </tag>
             
         </tags>
       
@@ -406,11 +415,11 @@
       
         <tags>
             
+            <tag> binary search </tag>
+            
             <tag> lintcode </tag>
             
             <tag> medium </tag>
-            
-            <tag> binary search </tag>
             
         </tags>
       
@@ -431,11 +440,11 @@
       
         <tags>
             
+            <tag> binary search </tag>
+            
             <tag> lintcode </tag>
             
             <tag> medium </tag>
-            
-            <tag> binary search </tag>
             
         </tags>
       
@@ -456,11 +465,11 @@
       
         <tags>
             
+            <tag> binary search </tag>
+            
             <tag> lintcode </tag>
             
             <tag> medium </tag>
-            
-            <tag> binary search </tag>
             
         </tags>
       
@@ -481,11 +490,11 @@
       
         <tags>
             
+            <tag> binary search </tag>
+            
             <tag> lintcode </tag>
             
             <tag> medium </tag>
-            
-            <tag> binary search </tag>
             
         </tags>
       
@@ -506,11 +515,11 @@
       
         <tags>
             
+            <tag> binary search </tag>
+            
             <tag> lintcode </tag>
             
             <tag> medium </tag>
-            
-            <tag> binary search </tag>
             
         </tags>
       
@@ -531,11 +540,11 @@
       
         <tags>
             
+            <tag> binary search </tag>
+            
             <tag> lintcode </tag>
             
             <tag> medium </tag>
-            
-            <tag> binary search </tag>
             
         </tags>
       
@@ -556,11 +565,11 @@
       
         <tags>
             
+            <tag> binary search </tag>
+            
             <tag> lintcode </tag>
             
             <tag> medium </tag>
-            
-            <tag> binary search </tag>
             
         </tags>
       
@@ -581,11 +590,11 @@
       
         <tags>
             
+            <tag> binary search </tag>
+            
             <tag> lintcode </tag>
             
             <tag> medium </tag>
-            
-            <tag> binary search </tag>
             
         </tags>
       
@@ -606,9 +615,9 @@
       
         <tags>
             
-            <tag> lintcode </tag>
-            
             <tag> binary search </tag>
+            
+            <tag> lintcode </tag>
             
             <tag> easy </tag>
             
