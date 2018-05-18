@@ -68,7 +68,7 @@
 
 
 
-  <meta name="keywords" content="Hexo, NexT" />
+  <meta name="keywords" content="Linked List,medium,leetcode," />
 
 
 
@@ -79,13 +79,18 @@
 
 
 
-<meta property="og:type" content="website">
-<meta property="og:title" content="Evelyn&#39;s Blog">
-<meta property="og:url" content="http://yoursite.com/archives/2018/05/page/2/index.html">
+<meta name="description" content="explanation这道题要删掉所有非distinct的node head一直指向目前知道的最后一个distinct node，找到一个非distinct 的node，把之后的值和这个node的value对比，直到找到下个不一样的值，head.next 指向他， 但是不改head，因为不知道这个node是不是distinct。 code123456789101112131415161718192">
+<meta name="keywords" content="Linked List,medium,leetcode">
+<meta property="og:type" content="article">
+<meta property="og:title" content="82. Remove Duplicates from Sorted List II">
+<meta property="og:url" content="http://yoursite.com/2018/05/18/82-Remove-Duplicates-from-Sorted-List-II/index.html">
 <meta property="og:site_name" content="Evelyn&#39;s Blog">
+<meta property="og:description" content="explanation这道题要删掉所有非distinct的node head一直指向目前知道的最后一个distinct node，找到一个非distinct 的node，把之后的值和这个node的value对比，直到找到下个不一样的值，head.next 指向他， 但是不改head，因为不知道这个node是不是distinct。 code123456789101112131415161718192">
 <meta property="og:locale" content="en">
+<meta property="og:updated_time" content="2018-05-18T19:18:39.921Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Evelyn&#39;s Blog">
+<meta name="twitter:title" content="82. Remove Duplicates from Sorted List II">
+<meta name="twitter:description" content="explanation这道题要删掉所有非distinct的node head一直指向目前知道的最后一个distinct node，找到一个非distinct 的node，把之后的值和这个node的value对比，直到找到下个不一样的值，head.next 指向他， 但是不改head，因为不知道这个node是不是distinct。 code123456789101112131415161718192">
 
 
 
@@ -115,13 +120,13 @@
 
 
 
-  <link rel="canonical" href="http://yoursite.com/archives/2018/05/page/2/"/>
+  <link rel="canonical" href="http://yoursite.com/2018/05/18/82-Remove-Duplicates-from-Sorted-List-II/"/>
 
 
 
 
 
-  <title>Archive | Evelyn's Blog</title>
+  <title>82. Remove Duplicates from Sorted List II | Evelyn's Blog</title>
   
 
 
@@ -140,7 +145,7 @@
     
   
 
-  <div class="container sidebar-position-left page-archive">
+  <div class="container sidebar-position-left page-post-detail">
     <div class="headband"></div>
 
     <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
@@ -268,411 +273,197 @@
           <div id="content" class="content">
             
 
-  
-  
-  
-  <div class="post-block archive">
-    <div id="posts" class="posts-collapse">
-      <span class="archive-move-on"></span>
+  <div id="posts" class="posts-expand">
+    
 
-      <span class="archive-page-counter">
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/05/18/82-Remove-Duplicates-from-Sorted-List-II/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Evelyn">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.jpeg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Evelyn's Blog">
+    </span>
+
+    
+      <header class="post-header">
+
         
         
+          <h1 class="post-title" itemprop="name headline">82. Remove Duplicates from Sorted List II</h1>
         
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2018-05-18T15:14:35-07:00">
+                2018-05-18
+              </time>
+            
+
+            
+
+            
+          </span>
+
           
-        
-        Um..! 30 posts in total. Keep on posting.
-      </span>
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">In</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/algorithms/" itemprop="url" rel="index">
+                    <span itemprop="name">algorithms</span>
+                  </a>
+                </span>
 
-      
-
-        
-        
-        
-
-        
+                
+                
+              
+            </span>
           
-          <div class="collection-title">
-            <h1 class="archive-year" id="archive-year-2018">2018</h1>
-          </div>
-        
-        
 
-        
+          
+            
+              <span class="post-comments-count">
+                <span class="post-meta-divider">|</span>
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-comment-o"></i>
+                </span>
+                <a href="/2018/05/18/82-Remove-Duplicates-from-Sorted-List-II/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count disqus-comment-count"
+                        data-disqus-identifier="2018/05/18/82-Remove-Duplicates-from-Sorted-List-II/" itemprop="commentCount"></span>
+                </a>
+              </span>
+            
+          
 
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
+          
+          
+             <span id="/2018/05/18/82-Remove-Duplicates-from-Sorted-List-II/" class="leancloud_visitors" data-flag-title="82. Remove Duplicates from Sorted List II">
+               <span class="post-meta-divider">|</span>
+               <span class="post-meta-item-icon">
+                 <i class="fa fa-eye"></i>
+               </span>
+               
+                 <span class="post-meta-item-text">Visitors&#58;</span>
+               
+                 <span class="leancloud-visitors-count"></span>
+             </span>
+          
 
-      <h2 class="post-title">
-        
-            <a class="post-title-link" href="/2018/05/08/40-Implement-Queue-by-Two-Stacks/" itemprop="url">
-              
-                <span itemprop="name">40. Implement Queue by Two Stacks</span>
-              
-            </a>
-        
-      </h2>
+          
 
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated"
-              datetime="2018-05-08T15:47:11-07:00"
-              content="2018-05-08" >
-          05-08
-        </time>
-      </div>
+          
 
-    </header>
-  </article>
+          
 
+        </div>
+      </header>
+    
 
-
-      
-
-        
-        
-        
-
-        
-        
-
-        
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <h2 class="post-title">
-        
-            <a class="post-title-link" href="/2018/05/08/104-Merge-K-Sorted-Lists/" itemprop="url">
-              
-                <span itemprop="name">104. Merge K Sorted Lists</span>
-              
-            </a>
-        
-      </h2>
-
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated"
-              datetime="2018-05-08T14:35:12-07:00"
-              content="2018-05-08" >
-          05-08
-        </time>
-      </div>
-
-    </header>
-  </article>
-
-
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
 
       
-
-        
-        
-        
-
-        
-        
-
-        
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <h2 class="post-title">
-        
-            <a class="post-title-link" href="/2018/05/08/544-Top-k-Largest-Numbers/" itemprop="url">
-              
-                <span itemprop="name">544. Top k Largest Numbers </span>
-              
-            </a>
-        
-      </h2>
-
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated"
-              datetime="2018-05-08T13:59:19-07:00"
-              content="2018-05-08" >
-          05-08
-        </time>
-      </div>
-
-    </header>
-  </article>
-
-
-
       
 
-        
-        
-        
-
-        
-        
-
-        
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <h2 class="post-title">
-        
-            <a class="post-title-link" href="/2018/05/05/612-K-Closest-Points/" itemprop="url">
-              
-                <span itemprop="name">612. K Closest Points</span>
-              
-            </a>
-        
-      </h2>
-
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated"
-              datetime="2018-05-05T16:49:41-07:00"
-              content="2018-05-05" >
-          05-05
-        </time>
-      </div>
-
-    </header>
-  </article>
-
-
+      
+        <h3 id="explanation"><a href="#explanation" class="headerlink" title="explanation"></a>explanation</h3><p>这道题要删掉所有非distinct的node</p>
+<p>head一直指向目前知道的最后一个distinct node，<br>找到一个非distinct 的node，<br>把之后的值和这个node的value对比，<br>直到找到下个不一样的值，<br>head.next 指向他， 但是不改head，因为不知道这个node是不是distinct。</p>
+<h3 id="code"><a href="#code" class="headerlink" title="code"></a>code</h3><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * Definition for singly-linked list.</span></span><br><span class="line"><span class="comment"> * public class ListNode &#123;</span></span><br><span class="line"><span class="comment"> *     int val;</span></span><br><span class="line"><span class="comment"> *     ListNode next;</span></span><br><span class="line"><span class="comment"> *     ListNode(int x) &#123; val = x; &#125;</span></span><br><span class="line"><span class="comment"> * &#125;</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span> </span>&#123;</span><br><span class="line">    <span class="comment">// 只留下distinct node</span></span><br><span class="line">    <span class="comment">// curt 和后面比不是和前面比</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> ListNode <span class="title">deleteDuplicates</span><span class="params">(ListNode head)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">if</span> (head == <span class="keyword">null</span> || head.next == <span class="keyword">null</span>) &#123;</span><br><span class="line">            <span class="keyword">return</span> head;</span><br><span class="line">        &#125;</span><br><span class="line">        ListNode dummy = <span class="keyword">new</span> ListNode(<span class="number">0</span>);</span><br><span class="line">        dummy.next = head;</span><br><span class="line">        head = dummy;</span><br><span class="line">        <span class="comment">// head 一直指向目前已知的distinct node</span></span><br><span class="line">        <span class="keyword">while</span> (head.next != <span class="keyword">null</span> &amp;&amp; head.next.next != <span class="keyword">null</span>) &#123;</span><br><span class="line">            <span class="keyword">if</span> (head.next.val == head.next.next.val) &#123; <span class="comment">// 发现head下面有非distinct元素</span></span><br><span class="line">                <span class="keyword">int</span> val = head.next.val;</span><br><span class="line">                ListNode nextNode = head.next.next;</span><br><span class="line">                <span class="keyword">while</span> (nextNode != <span class="keyword">null</span> &amp;&amp; nextNode.val == val) &#123; <span class="comment">// 一定要先判断 nextNode != null.  Input: [1, 1]</span></span><br><span class="line">                    nextNode = nextNode.next;</span><br><span class="line">                &#125;</span><br><span class="line">                head.next = nextNode;</span><br><span class="line">             <span class="comment">//   head = head.next; 这句不能有！因为不直到nextNode是不是distinct</span></span><br><span class="line">            &#125; <span class="keyword">else</span> &#123; <span class="comment">// head 下面的node有distinct元素</span></span><br><span class="line">                head = head.next;</span><br><span class="line">            &#125;</span><br><span class="line"></span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> dummy.next;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
       
-
-        
-        
-        
-
-        
-        
-
-        
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <h2 class="post-title">
-        
-            <a class="post-title-link" href="/2018/05/05/657-Insert-Delete-GetRandom-O-1/" itemprop="url">
-              
-                <span itemprop="name">657. Insert Delete GetRandom O(1)</span>
-              
-            </a>
-        
-      </h2>
-
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated"
-              datetime="2018-05-05T16:40:58-07:00"
-              content="2018-05-05" >
-          05-05
-        </time>
-      </div>
-
-    </header>
-  </article>
-
-
-
-      
-
-        
-        
-        
-
-        
-        
-
-        
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <h2 class="post-title">
-        
-            <a class="post-title-link" href="/2018/05/05/209-First-Unique-Character-in-a-String/" itemprop="url">
-              
-                <span itemprop="name">209. First Unique Character in a String</span>
-              
-            </a>
-        
-      </h2>
-
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated"
-              datetime="2018-05-05T15:29:24-07:00"
-              content="2018-05-05" >
-          05-05
-        </time>
-      </div>
-
-    </header>
-  </article>
-
-
-
-      
-
-        
-        
-        
-
-        
-        
-
-        
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <h2 class="post-title">
-        
-            <a class="post-title-link" href="/2018/05/05/494-Implement-Stack-by-Two-Queues/" itemprop="url">
-              
-                <span itemprop="name">494. Implement Stack by Two Queues</span>
-              
-            </a>
-        
-      </h2>
-
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated"
-              datetime="2018-05-05T14:43:32-07:00"
-              content="2018-05-05" >
-          05-05
-        </time>
-      </div>
-
-    </header>
-  </article>
-
-
-
-      
-
-        
-        
-        
-
-        
-        
-
-        
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <h2 class="post-title">
-        
-            <a class="post-title-link" href="/2018/05/04/642-Moving-Average-from-Data-Stream/" itemprop="url">
-              
-                <span itemprop="name">642. Moving Average from Data Stream </span>
-              
-            </a>
-        
-      </h2>
-
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated"
-              datetime="2018-05-04T10:03:30-07:00"
-              content="2018-05-04" >
-          05-04
-        </time>
-      </div>
-
-    </header>
-  </article>
-
-
-
-      
-
-        
-        
-        
-
-        
-        
-
-        
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <h2 class="post-title">
-        
-            <a class="post-title-link" href="/2018/05/03/62-Search-in-Rotated-Sorted-Array/" itemprop="url">
-              
-                <span itemprop="name">62. Search in Rotated Sorted Array</span>
-              
-            </a>
-        
-      </h2>
-
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated"
-              datetime="2018-05-03T16:48:19-07:00"
-              content="2018-05-03" >
-          05-03
-        </time>
-      </div>
-
-    </header>
-  </article>
-
-
-
-      
-
-        
-        
-        
-
-        
-        
-
-        
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <h2 class="post-title">
-        
-            <a class="post-title-link" href="/2018/05/02/74-First-Bad-Version/" itemprop="url">
-              
-                <span itemprop="name">74. First Bad Version</span>
-              
-            </a>
-        
-      </h2>
-
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated"
-              datetime="2018-05-02T16:38:53-07:00"
-              content="2018-05-02" >
-          05-02
-        </time>
-      </div>
-
-    </header>
-  </article>
-
-
-
-      
-
     </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/Linked-List/" rel="tag"># Linked List</a>
+          
+            <a href="/tags/medium/" rel="tag"># medium</a>
+          
+            <a href="/tags/leetcode/" rel="tag"># leetcode</a>
+          
+        </div>
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2018/05/18/2-Add-Two-Numbers/" rel="next" title="2. Add Two Numbers">
+                <i class="fa fa-chevron-left"></i> 2. Add Two Numbers
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
   </div>
   
   
   
-
-  
-  <nav class="pagination">
-    <a class="extend prev" rel="prev" href="/archives/2018/05/"><i class="fa fa-angle-left"></i></a><a class="page-number" href="/archives/2018/05/">1</a><span class="page-number current">2</span><a class="page-number" href="/archives/2018/05/page/3/">3</a><a class="extend next" rel="next" href="/archives/2018/05/page/3/"><i class="fa fa-angle-right"></i></a>
-  </nav>
+  </article>
 
 
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
 
 
           </div>
@@ -680,6 +471,20 @@
 
 
           
+
+  
+    <div class="comments" id="comments">
+      <div id="disqus_thread">
+        <noscript>
+          Please enable JavaScript to view the
+          <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a>
+        </noscript>
+      </div>
+    </div>
+
+  
+
+
 
         </div>
         
@@ -700,8 +505,17 @@
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            Table of Contents
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            Overview
+          </li>
+        </ul>
+      
 
-      <section class="site-overview-wrap sidebar-panel sidebar-panel-active">
+      <section class="site-overview-wrap sidebar-panel">
         <div class="site-overview">
           <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
             
@@ -781,6 +595,22 @@
         </div>
       </section>
 
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#explanation"><span class="nav-number">1.</span> <span class="nav-text">explanation</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#code"><span class="nav-number">2.</span> <span class="nav-text">code</span></a></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
       
 
       
@@ -921,6 +751,10 @@
 
 
   
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.4"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.4"></script>
+
+
 
   
 
@@ -938,6 +772,18 @@
       <script id="dsq-count-scr" src="https://musainlizzy.disqus.com/count.js" async></script>
     
 
+    
+      <script type="text/javascript">
+        var disqus_config = function () {
+          this.page.url = 'http://yoursite.com/2018/05/18/82-Remove-Duplicates-from-Sorted-List-II/';
+          this.page.identifier = '2018/05/18/82-Remove-Duplicates-from-Sorted-List-II/';
+          this.page.title = '82. Remove Duplicates from Sorted List II';
+        };
+        var d = document, s = d.createElement('script');
+        s.src = 'https://musainlizzy.disqus.com/embed.js';
+        s.setAttribute('data-timestamp', '' + +new Date());
+        (d.head || d.body).appendChild(s);
+      </script>
     
 
   
