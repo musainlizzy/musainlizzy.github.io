@@ -79,18 +79,18 @@
 
 
 
-<meta name="description" content="explanation二维数组拉成一位数组start = 0;end = col * row - 1;r = index / col;c = index % col; code12345678910111213141516171819202122232425262728293031323334353637public class Solution &amp;#123;    /**     * @para">
+<meta name="description" content="explanation二维数组拉成一维数组start = 0;end = col * row - 1;r = index / col;c = index % col; code12345678910111213141516171819202122232425262728293031323334353637public class Solution &amp;#123;    /**     * @para">
 <meta name="keywords" content="lintcode,binary search,easy">
 <meta property="og:type" content="article">
 <meta property="og:title" content="28. Search a 2D Matrix">
 <meta property="og:url" content="http://yoursite.com/2018/05/24/28-Search-a-2D-Matrix/index.html">
 <meta property="og:site_name" content="Evelyn&#39;s Blog">
-<meta property="og:description" content="explanation二维数组拉成一位数组start = 0;end = col * row - 1;r = index / col;c = index % col; code12345678910111213141516171819202122232425262728293031323334353637public class Solution &amp;#123;    /**     * @para">
+<meta property="og:description" content="explanation二维数组拉成一维数组start = 0;end = col * row - 1;r = index / col;c = index % col; code12345678910111213141516171819202122232425262728293031323334353637public class Solution &amp;#123;    /**     * @para">
 <meta property="og:locale" content="en">
-<meta property="og:updated_time" content="2018-05-24T15:20:28.586Z">
+<meta property="og:updated_time" content="2018-05-24T15:21:06.548Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="28. Search a 2D Matrix">
-<meta name="twitter:description" content="explanation二维数组拉成一位数组start = 0;end = col * row - 1;r = index / col;c = index % col; code12345678910111213141516171819202122232425262728293031323334353637public class Solution &amp;#123;    /**     * @para">
+<meta name="twitter:description" content="explanation二维数组拉成一维数组start = 0;end = col * row - 1;r = index / col;c = index % col; code12345678910111213141516171819202122232425262728293031323334353637public class Solution &amp;#123;    /**     * @para">
 
 
 
@@ -316,7 +316,7 @@
               
                 <span class="post-meta-item-text">Posted on</span>
               
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2018-05-24T11:18:42-07:00">
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2018-05-24T14:18:42-04:00">
                 2018-05-24
               </time>
             
@@ -398,7 +398,7 @@
       
 
       
-        <h3 id="explanation"><a href="#explanation" class="headerlink" title="explanation"></a>explanation</h3><p>二维数组拉成一位数组<br>start = 0;<br>end = col * row - 1;<br>r = index / col;<br>c = index % col;</p>
+        <h3 id="explanation"><a href="#explanation" class="headerlink" title="explanation"></a>explanation</h3><p>二维数组拉成一维数组<br>start = 0;<br>end = col * row - 1;<br>r = index / col;<br>c = index % col;</p>
 <h3 id="code"><a href="#code" class="headerlink" title="code"></a>code</h3><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Solution</span> </span>&#123;</span><br><span class="line">    <span class="comment">/**</span></span><br><span class="line"><span class="comment">     * <span class="doctag">@param</span> matrix: matrix, a list of lists of integers</span></span><br><span class="line"><span class="comment">     * <span class="doctag">@param</span> target: An integer</span></span><br><span class="line"><span class="comment">     * <span class="doctag">@return</span>: a boolean, indicate whether matrix contains target</span></span><br><span class="line"><span class="comment">     */</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">boolean</span> <span class="title">searchMatrix</span><span class="params">(<span class="keyword">int</span>[][] matrix, <span class="keyword">int</span> target)</span> </span>&#123;</span><br><span class="line">        <span class="comment">// write your code here</span></span><br><span class="line">        <span class="keyword">if</span> (matrix.length == <span class="number">0</span> || matrix[<span class="number">0</span>].length == <span class="number">0</span>) &#123;</span><br><span class="line">            <span class="keyword">return</span> <span class="keyword">false</span>;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">int</span> row = matrix.length;</span><br><span class="line">        <span class="keyword">int</span> col = matrix[<span class="number">0</span>].length;</span><br><span class="line">        <span class="keyword">int</span> start = <span class="number">0</span>;</span><br><span class="line">        <span class="keyword">int</span> end = row * col - <span class="number">1</span>;</span><br><span class="line">        <span class="keyword">while</span> (start + <span class="number">1</span> &lt; end) &#123;</span><br><span class="line">            <span class="keyword">int</span> mid = start + (end - start) / <span class="number">2</span>;</span><br><span class="line">            <span class="keyword">int</span> r = mid / col;</span><br><span class="line">            <span class="keyword">int</span> c = mid % col;</span><br><span class="line">            <span class="keyword">if</span> (matrix[r][c] == target) &#123;</span><br><span class="line">                <span class="keyword">return</span> <span class="keyword">true</span>;</span><br><span class="line">            &#125; <span class="keyword">else</span> <span class="keyword">if</span> (matrix[r][c] &lt; target) &#123;</span><br><span class="line">                start = mid;</span><br><span class="line">            &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">                end = mid;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        <span class="keyword">if</span> (matrix[start/col][start % col] == target) &#123;</span><br><span class="line">            <span class="keyword">return</span> <span class="keyword">true</span>;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">if</span> (matrix[end/col][end % col] == target) &#123;</span><br><span class="line">            <span class="keyword">return</span> <span class="keyword">true</span>;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> <span class="keyword">false</span>;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
       
