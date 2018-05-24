@@ -68,7 +68,7 @@
 
 
 
-  <meta name="keywords" content="lintcode,medium,binary search," />
+  <meta name="keywords" content="Linked List,medium,leetcode,Sort," />
 
 
 
@@ -79,18 +79,18 @@
 
 
 
-<meta name="description" content="code1234567891011121314151617181920212223242526272829303132333435/** * public class SVNRepo &amp;#123; *     public static boolean isBadVersion(int k); * &amp;#125; * you can use SVNRepo.isBadVersion(k) to ju">
-<meta name="keywords" content="lintcode,medium,binary search">
+<meta name="description" content="explanationfind middle pointsplitmerge">
+<meta name="keywords" content="Linked List,medium,leetcode,Sort">
 <meta property="og:type" content="article">
-<meta property="og:title" content="74. First Bad Version">
-<meta property="og:url" content="http://yoursite.com/2018/05/02/74-First-Bad-Version/index.html">
+<meta property="og:title" content="148. Sort List">
+<meta property="og:url" content="http://yoursite.com/2018/05/18/148-Sort-List/index.html">
 <meta property="og:site_name" content="Evelyn&#39;s Blog">
-<meta property="og:description" content="code1234567891011121314151617181920212223242526272829303132333435/** * public class SVNRepo &amp;#123; *     public static boolean isBadVersion(int k); * &amp;#125; * you can use SVNRepo.isBadVersion(k) to ju">
+<meta property="og:description" content="explanationfind middle pointsplitmerge">
 <meta property="og:locale" content="en">
-<meta property="og:updated_time" content="2018-05-08T22:03:09.923Z">
+<meta property="og:updated_time" content="2018-05-18T20:17:44.280Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="74. First Bad Version">
-<meta name="twitter:description" content="code1234567891011121314151617181920212223242526272829303132333435/** * public class SVNRepo &amp;#123; *     public static boolean isBadVersion(int k); * &amp;#125; * you can use SVNRepo.isBadVersion(k) to ju">
+<meta name="twitter:title" content="148. Sort List">
+<meta name="twitter:description" content="explanationfind middle pointsplitmerge">
 
 
 
@@ -120,13 +120,13 @@
 
 
 
-  <link rel="canonical" href="http://yoursite.com/2018/05/02/74-First-Bad-Version/"/>
+  <link rel="canonical" href="http://yoursite.com/2018/05/18/148-Sort-List/"/>
 
 
 
 
 
-  <title>74. First Bad Version | Evelyn's Blog</title>
+  <title>148. Sort List | Evelyn's Blog</title>
   
 
 
@@ -287,7 +287,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/05/02/74-First-Bad-Version/">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/05/18/148-Sort-List/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Evelyn">
@@ -304,7 +304,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">74. First Bad Version</h1>
+          <h1 class="post-title" itemprop="name headline">148. Sort List</h1>
         
 
         <div class="post-meta">
@@ -316,8 +316,8 @@
               
                 <span class="post-meta-item-text">Posted on</span>
               
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2018-05-02T19:38:53-04:00">
-                2018-05-02
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2018-05-18T16:16:55-07:00">
+                2018-05-18
               </time>
             
 
@@ -357,9 +357,9 @@
                 <span class="post-meta-item-icon">
                   <i class="fa fa-comment-o"></i>
                 </span>
-                <a href="/2018/05/02/74-First-Bad-Version/#comments" itemprop="discussionUrl">
+                <a href="/2018/05/18/148-Sort-List/#comments" itemprop="discussionUrl">
                   <span class="post-comments-count disqus-comment-count"
-                        data-disqus-identifier="2018/05/02/74-First-Bad-Version/" itemprop="commentCount"></span>
+                        data-disqus-identifier="2018/05/18/148-Sort-List/" itemprop="commentCount"></span>
                 </a>
               </span>
             
@@ -367,7 +367,7 @@
 
           
           
-             <span id="/2018/05/02/74-First-Bad-Version/" class="leancloud_visitors" data-flag-title="74. First Bad Version">
+             <span id="/2018/05/18/148-Sort-List/" class="leancloud_visitors" data-flag-title="148. Sort List">
                <span class="post-meta-divider">|</span>
                <span class="post-meta-item-icon">
                  <i class="fa fa-eye"></i>
@@ -398,7 +398,7 @@
       
 
       
-        <h3 id="code"><a href="#code" class="headerlink" title="code"></a>code</h3><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * public class SVNRepo &#123;</span></span><br><span class="line"><span class="comment"> *     public static boolean isBadVersion(int k);</span></span><br><span class="line"><span class="comment"> * &#125;</span></span><br><span class="line"><span class="comment"> * you can use SVNRepo.isBadVersion(k) to judge whether</span></span><br><span class="line"><span class="comment"> * the kth code version is bad or not.</span></span><br><span class="line"><span class="comment">*/</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Solution</span> </span>&#123;</span><br><span class="line">    <span class="comment">/*</span></span><br><span class="line"><span class="comment">     * @param n: An integer</span></span><br><span class="line"><span class="comment">     * @return: An integer which is the first bad version.</span></span><br><span class="line"><span class="comment">     */</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">int</span> <span class="title">findFirstBadVersion</span><span class="params">(<span class="keyword">int</span> n)</span> </span>&#123;</span><br><span class="line">        <span class="comment">// write your code here</span></span><br><span class="line">        <span class="comment">// first posion of target</span></span><br><span class="line">        <span class="keyword">int</span> start = <span class="number">1</span>, end = n;</span><br><span class="line"></span><br><span class="line">        <span class="keyword">while</span> (start + <span class="number">1</span> &lt; end) &#123;</span><br><span class="line">            <span class="keyword">int</span> mid = start + (end - start) / <span class="number">2</span>;</span><br><span class="line">            <span class="keyword">if</span> (SVNRepo.isBadVersion(mid)) &#123;</span><br><span class="line">                end = mid;</span><br><span class="line">            &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">                System.out.println(start);</span><br><span class="line">                start = mid;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">if</span> (SVNRepo.isBadVersion(start)) &#123;</span><br><span class="line">            <span class="keyword">return</span> start;</span><br><span class="line">        &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">            <span class="keyword">return</span> end;</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+        <h3 id="explanation"><a href="#explanation" class="headerlink" title="explanation"></a>explanation</h3><p>find middle point<br>split<br>merge</p>
 
       
     </div>
@@ -416,11 +416,13 @@
       
         <div class="post-tags">
           
-            <a href="/tags/lintcode/" rel="tag"># lintcode</a>
+            <a href="/tags/Linked-List/" rel="tag"># Linked List</a>
           
             <a href="/tags/medium/" rel="tag"># medium</a>
           
-            <a href="/tags/binary-search/" rel="tag"># binary search</a>
+            <a href="/tags/leetcode/" rel="tag"># leetcode</a>
+          
+            <a href="/tags/Sort/" rel="tag"># Sort</a>
           
         </div>
       
@@ -433,8 +435,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2018/05/02/75-Find-Peak-Element/" rel="next" title="75. Find Peak Element">
-                <i class="fa fa-chevron-left"></i> 75. Find Peak Element
+              <a href="/2018/05/18/Merge-Sort/" rel="next" title="Merge Sort">
+                <i class="fa fa-chevron-left"></i> Merge Sort
               </a>
             
           </div>
@@ -443,8 +445,8 @@
 
           <div class="post-nav-prev post-nav-item">
             
-              <a href="/2018/05/03/62-Search-in-Rotated-Sorted-Array/" rel="prev" title="62. Search in Rotated Sorted Array">
-                62. Search in Rotated Sorted Array <i class="fa fa-chevron-right"></i>
+              <a href="/2018/05/24/28-Search-a-2D-Matrix/" rel="prev" title="28. Search a 2D Matrix">
+                28. Search a 2D Matrix <i class="fa fa-chevron-right"></i>
               </a>
             
           </div>
@@ -607,7 +609,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#code"><span class="nav-number">1.</span> <span class="nav-text">code</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#explanation"><span class="nav-number">1.</span> <span class="nav-text">explanation</span></a></li></ol></div>
             
 
           </div>
@@ -777,9 +779,9 @@
     
       <script type="text/javascript">
         var disqus_config = function () {
-          this.page.url = 'http://yoursite.com/2018/05/02/74-First-Bad-Version/';
-          this.page.identifier = '2018/05/02/74-First-Bad-Version/';
-          this.page.title = '74. First Bad Version';
+          this.page.url = 'http://yoursite.com/2018/05/18/148-Sort-List/';
+          this.page.identifier = '2018/05/18/148-Sort-List/';
+          this.page.title = '148. Sort List';
         };
         var d = document, s = d.createElement('script');
         s.src = 'https://musainlizzy.disqus.com/embed.js';
