@@ -68,7 +68,7 @@
 
 
 
-  <meta name="keywords" content="Linked List,medium,leetcode," />
+  <meta name="keywords" content="binary search,leetcode,easy," />
 
 
 
@@ -79,18 +79,18 @@
 
 
 
-<meta name="description" content="explanation// 两个数字位数一样吗？// 位数不一样也没有关系，因为是reverse order， head是低位，无论如何都要从低位开始加，进位到后面的node method 1: 三个while          O(n + m)          或者          O(max(m, n)) while iterator O(max(m, n))次method 2: 一个wh">
-<meta name="keywords" content="Linked List,medium,leetcode">
+<meta name="description" content="explanationfind smallest elements that is larger than targetLetters also wrap around. For example, if the target is target = ‘z’ and letters = [‘a’, ‘b’], the answer is ‘a’. 如果没有提warp around，{a, b , c">
+<meta name="keywords" content="binary search,leetcode,easy">
 <meta property="og:type" content="article">
-<meta property="og:title" content="2. Add Two Numbers">
-<meta property="og:url" content="http://yoursite.com/2018/05/18/2-Add-Two-Numbers/index.html">
+<meta property="og:title" content="744. Find Smallest Letter Greater Than Target">
+<meta property="og:url" content="http://yoursite.com/2018/05/24/744-Find-Smallest-Letter-Greater-Than-Target/index.html">
 <meta property="og:site_name" content="Evelyn&#39;s Blog">
-<meta property="og:description" content="explanation// 两个数字位数一样吗？// 位数不一样也没有关系，因为是reverse order， head是低位，无论如何都要从低位开始加，进位到后面的node method 1: 三个while          O(n + m)          或者          O(max(m, n)) while iterator O(max(m, n))次method 2: 一个wh">
+<meta property="og:description" content="explanationfind smallest elements that is larger than targetLetters also wrap around. For example, if the target is target = ‘z’ and letters = [‘a’, ‘b’], the answer is ‘a’. 如果没有提warp around，{a, b , c">
 <meta property="og:locale" content="en">
-<meta property="og:updated_time" content="2018-05-18T14:42:53.144Z">
+<meta property="og:updated_time" content="2018-05-24T20:49:17.664Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="2. Add Two Numbers">
-<meta name="twitter:description" content="explanation// 两个数字位数一样吗？// 位数不一样也没有关系，因为是reverse order， head是低位，无论如何都要从低位开始加，进位到后面的node method 1: 三个while          O(n + m)          或者          O(max(m, n)) while iterator O(max(m, n))次method 2: 一个wh">
+<meta name="twitter:title" content="744. Find Smallest Letter Greater Than Target">
+<meta name="twitter:description" content="explanationfind smallest elements that is larger than targetLetters also wrap around. For example, if the target is target = ‘z’ and letters = [‘a’, ‘b’], the answer is ‘a’. 如果没有提warp around，{a, b , c">
 
 
 
@@ -120,13 +120,13 @@
 
 
 
-  <link rel="canonical" href="http://yoursite.com/2018/05/18/2-Add-Two-Numbers/"/>
+  <link rel="canonical" href="http://yoursite.com/2018/05/24/744-Find-Smallest-Letter-Greater-Than-Target/"/>
 
 
 
 
 
-  <title>2. Add Two Numbers | Evelyn's Blog</title>
+  <title>744. Find Smallest Letter Greater Than Target | Evelyn's Blog</title>
   
 
 
@@ -287,7 +287,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/05/18/2-Add-Two-Numbers/">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/05/24/744-Find-Smallest-Letter-Greater-Than-Target/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Evelyn">
@@ -304,7 +304,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">2. Add Two Numbers</h1>
+          <h1 class="post-title" itemprop="name headline">744. Find Smallest Letter Greater Than Target</h1>
         
 
         <div class="post-meta">
@@ -316,8 +316,8 @@
               
                 <span class="post-meta-item-text">Posted on</span>
               
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2018-05-18T13:29:57-04:00">
-                2018-05-18
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2018-05-24T16:39:43-07:00">
+                2018-05-24
               </time>
             
 
@@ -357,9 +357,9 @@
                 <span class="post-meta-item-icon">
                   <i class="fa fa-comment-o"></i>
                 </span>
-                <a href="/2018/05/18/2-Add-Two-Numbers/#comments" itemprop="discussionUrl">
+                <a href="/2018/05/24/744-Find-Smallest-Letter-Greater-Than-Target/#comments" itemprop="discussionUrl">
                   <span class="post-comments-count disqus-comment-count"
-                        data-disqus-identifier="2018/05/18/2-Add-Two-Numbers/" itemprop="commentCount"></span>
+                        data-disqus-identifier="2018/05/24/744-Find-Smallest-Letter-Greater-Than-Target/" itemprop="commentCount"></span>
                 </a>
               </span>
             
@@ -367,7 +367,7 @@
 
           
           
-             <span id="/2018/05/18/2-Add-Two-Numbers/" class="leancloud_visitors" data-flag-title="2. Add Two Numbers">
+             <span id="/2018/05/24/744-Find-Smallest-Letter-Greater-Than-Target/" class="leancloud_visitors" data-flag-title="744. Find Smallest Letter Greater Than Target">
                <span class="post-meta-divider">|</span>
                <span class="post-meta-item-icon">
                  <i class="fa fa-eye"></i>
@@ -398,10 +398,9 @@
       
 
       
-        <h3 id="explanation"><a href="#explanation" class="headerlink" title="explanation"></a>explanation</h3><p>// 两个数字位数一样吗？<br>// 位数不一样也没有关系，因为是reverse order， head是低位，无论如何都要从低位开始加，进位到后面的node</p>
-<p>method 1: 三个while<br>          O(n + m)<br>          或者<br>          O(max(m, n)) while iterator O(max(m, n))次<br>method 2: 一个while O(n + m)<br>          或者<br>          O(max(m, n))</p>
-<h3 id="code"><a href="#code" class="headerlink" title="code"></a>code</h3><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * Definition for singly-linked list.</span></span><br><span class="line"><span class="comment"> * public class ListNode &#123;</span></span><br><span class="line"><span class="comment"> *     int val;</span></span><br><span class="line"><span class="comment"> *     ListNode next;</span></span><br><span class="line"><span class="comment"> *     ListNode(int x) &#123; val = x; &#125;</span></span><br><span class="line"><span class="comment"> * &#125;</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span> </span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> ListNode <span class="title">addTwoNumbers</span><span class="params">(ListNode l1, ListNode l2)</span> </span>&#123;</span><br><span class="line">        ListNode dummy = <span class="keyword">new</span> ListNode(<span class="number">0</span>);</span><br><span class="line">        ListNode prev = dummy;</span><br><span class="line">        <span class="keyword">int</span> carry = <span class="number">0</span>;</span><br><span class="line">        <span class="keyword">while</span> (l1 != <span class="keyword">null</span> &amp;&amp; l2 != <span class="keyword">null</span>) &#123;</span><br><span class="line">            <span class="keyword">int</span> sum = l1.val + l2.val + carry;</span><br><span class="line">            <span class="keyword">int</span> curt = sum % <span class="number">10</span>;</span><br><span class="line">            carry = sum / <span class="number">10</span>;</span><br><span class="line">            ListNode newNode = <span class="keyword">new</span> ListNode(curt);</span><br><span class="line">            prev.next = newNode;</span><br><span class="line">            prev = prev.next;</span><br><span class="line">            l1 = l1.next;</span><br><span class="line">            l2 = l2.next;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">while</span> ( l1 != <span class="keyword">null</span>) &#123;</span><br><span class="line">            <span class="keyword">int</span> sum = l1.val + carry;</span><br><span class="line">            <span class="keyword">int</span> curt = sum % <span class="number">10</span>;</span><br><span class="line">            carry = sum / <span class="number">10</span>;</span><br><span class="line">            ListNode newNode = <span class="keyword">new</span> ListNode(curt);</span><br><span class="line">            prev.next = newNode;</span><br><span class="line">            prev = prev.next;</span><br><span class="line">            l1 = l1.next;           </span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">while</span> ( l2 != <span class="keyword">null</span>) &#123;</span><br><span class="line">            <span class="keyword">int</span> sum = l2.val + carry;</span><br><span class="line">            <span class="keyword">int</span> curt = sum % <span class="number">10</span>;</span><br><span class="line">            carry = sum / <span class="number">10</span>;</span><br><span class="line">            ListNode newNode = <span class="keyword">new</span> ListNode(curt);</span><br><span class="line">            prev.next = newNode;</span><br><span class="line">            prev = prev.next;</span><br><span class="line">            l2 = l2.next;           </span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">if</span> (carry &gt; <span class="number">0</span>) &#123;</span><br><span class="line">            ListNode newNode = <span class="keyword">new</span> ListNode(carry);</span><br><span class="line">            prev.next = newNode;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> dummy.next;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span> </span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> ListNode <span class="title">addTwoNumbers</span><span class="params">(ListNode l1, ListNode l2)</span> </span>&#123;</span><br><span class="line">        ListNode dummy = <span class="keyword">new</span> ListNode(<span class="number">0</span>);</span><br><span class="line">        ListNode prev = dummy;</span><br><span class="line">        <span class="keyword">int</span> carry = <span class="number">0</span>;</span><br><span class="line">        <span class="keyword">while</span> (l1 != <span class="keyword">null</span> || l2 != <span class="keyword">null</span> || carry != <span class="number">0</span>) &#123;</span><br><span class="line">            <span class="keyword">int</span> x = (l1 == <span class="keyword">null</span>) ? <span class="number">0</span> : l1.val;</span><br><span class="line">            <span class="keyword">int</span> y = (l2 == <span class="keyword">null</span>) ? <span class="number">0</span> : l2.val;</span><br><span class="line">            <span class="keyword">int</span> sum = x + y + carry;</span><br><span class="line">            <span class="keyword">int</span> curt = sum % <span class="number">10</span>;</span><br><span class="line">            carry = sum / <span class="number">10</span>;</span><br><span class="line">            ListNode newNode = <span class="keyword">new</span> ListNode(curt);</span><br><span class="line">            prev.next = newNode;</span><br><span class="line">            prev = prev.next;</span><br><span class="line">            <span class="keyword">if</span> (l1 != <span class="keyword">null</span>) &#123;</span><br><span class="line">                l1 = l1.next;</span><br><span class="line">            &#125;</span><br><span class="line">            <span class="keyword">if</span> (l2 != <span class="keyword">null</span>) &#123;</span><br><span class="line">                l2 = l2.next;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> dummy.next;</span><br><span class="line"></span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+        <h3 id="explanation"><a href="#explanation" class="headerlink" title="explanation"></a>explanation</h3><p>find smallest elements that is larger than target<br>Letters also wrap around. For example, if the target is target = ‘z’ and letters = [‘a’, ‘b’], the answer is ‘a’.</p>
+<p>如果没有提warp around，{a, b , c} target c， 需要问面试官这种情况下， 返回什么</p>
+<h3 id="code"><a href="#code" class="headerlink" title="code"></a>code</h3><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span> </span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">char</span> <span class="title">nextGreatestLetter</span><span class="params">(<span class="keyword">char</span>[] letters, <span class="keyword">char</span> target)</span></span>&#123;</span><br><span class="line">        <span class="comment">// !compare character</span></span><br><span class="line">        <span class="comment">// if (letters == null || letters.length == 0) &#123;</span></span><br><span class="line">        <span class="comment">//     throw new Exception("letters is empty.");</span></span><br><span class="line">        <span class="comment">// &#125;</span></span><br><span class="line">        <span class="keyword">int</span> start = <span class="number">0</span>, end = letters.length - <span class="number">1</span>;</span><br><span class="line">        <span class="keyword">while</span> (start + <span class="number">1</span> &lt; end) &#123;</span><br><span class="line">            <span class="keyword">int</span> mid = start + (end - start) / <span class="number">2</span>;</span><br><span class="line">            <span class="keyword">if</span> (letters[mid] &lt;= target) &#123;</span><br><span class="line">                start = mid + <span class="number">1</span>;</span><br><span class="line">            &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">                end = mid;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        <span class="keyword">if</span> (letters[start] &gt; target) &#123;</span><br><span class="line">            <span class="keyword">return</span> letters[start];</span><br><span class="line">        &#125; <span class="keyword">else</span> <span class="keyword">if</span> (letters[end] &gt; target) &#123;</span><br><span class="line">            <span class="keyword">return</span> letters[end];</span><br><span class="line">        &#125; <span class="keyword">else</span> &#123; <span class="comment">// start 和 end 都 &lt;= target， end 不可能在中间， 只可能在最后一位</span></span><br><span class="line">            <span class="keyword">return</span> letters[<span class="number">0</span>];</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
       
     </div>
@@ -419,11 +418,11 @@
       
         <div class="post-tags">
           
-            <a href="/tags/Linked-List/" rel="tag"># Linked List</a>
-          
-            <a href="/tags/medium/" rel="tag"># medium</a>
+            <a href="/tags/binary-search/" rel="tag"># binary search</a>
           
             <a href="/tags/leetcode/" rel="tag"># leetcode</a>
+          
+            <a href="/tags/easy/" rel="tag"># easy</a>
           
         </div>
       
@@ -436,8 +435,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2018/05/14/143-Reorder-List/" rel="next" title="143. Reorder List">
-                <i class="fa fa-chevron-left"></i> 143. Reorder List
+              <a href="/2018/05/24/459-Closest-Number-in-Sorted-Array/" rel="next" title="459. Closest Number in Sorted Array">
+                <i class="fa fa-chevron-left"></i> 459. Closest Number in Sorted Array
               </a>
             
           </div>
@@ -445,10 +444,6 @@
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2018/05/18/82-Remove-Duplicates-from-Sorted-List-II/" rel="prev" title="82. Remove Duplicates from Sorted List II">
-                82. Remove Duplicates from Sorted List II <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
@@ -780,9 +775,9 @@
     
       <script type="text/javascript">
         var disqus_config = function () {
-          this.page.url = 'http://yoursite.com/2018/05/18/2-Add-Two-Numbers/';
-          this.page.identifier = '2018/05/18/2-Add-Two-Numbers/';
-          this.page.title = '2. Add Two Numbers';
+          this.page.url = 'http://yoursite.com/2018/05/24/744-Find-Smallest-Letter-Greater-Than-Target/';
+          this.page.identifier = '2018/05/24/744-Find-Smallest-Letter-Greater-Than-Target/';
+          this.page.title = '744. Find Smallest Letter Greater Than Target';
         };
         var d = document, s = d.createElement('script');
         s.src = 'https://musainlizzy.disqus.com/embed.js';
