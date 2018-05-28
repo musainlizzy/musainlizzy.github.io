@@ -3,6 +3,29 @@
   
     
     <entry>
+      <title>Selection Sort</title>
+      <link href="/2018/05/28/Selection-Sort/"/>
+      <url>/2018/05/28/Selection-Sort/</url>
+      <content type="html"><![CDATA[<h3 id="explanation"><a href="#explanation" class="headerlink" title="explanation"></a>explanation</h3><p>find minimum element, swap it? check 08722 lecture<br>0 8 7 2 3<br>0 8 7 2 3<br>0 2 7 9 3<br>0 2 3 9 7<br>0 2 3 7 9<br>time complexity: O(n^2)</p><p>space complexity: O(1)</p><h3 id="code"><a href="#code" class="headerlink" title="code"></a>code</h3><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">selectionSort</span><span class="params">(<span class="keyword">int</span>[] arr)</span> </span>&#123;</span><br><span class="line">  <span class="keyword">if</span> (arr == <span class="keyword">null</span> || arr.length &lt;= <span class="number">1</span>) &#123;</span><br><span class="line">    <span class="keyword">return</span>;</span><br><span class="line">  &#125;</span><br><span class="line"></span><br><span class="line">  <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; arr.length; i++) &#123;</span><br><span class="line">    <span class="keyword">int</span> minIndex = i;</span><br><span class="line">    <span class="keyword">for</span> (<span class="keyword">int</span> j = i; j &lt; arr.length; j++) &#123;</span><br><span class="line">      <span class="keyword">if</span> (arr[j] &lt; arr[minIndex]) &#123;</span><br><span class="line">        minIndex = j;</span><br><span class="line">      &#125;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    swap(i, minIndex, arr);</span><br><span class="line">  &#125;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">private</span> <span class="keyword">void</span> <span class="title">swap</span><span class="params">(<span class="keyword">int</span> i, <span class="keyword">int</span> j, <span class="keyword">int</span>[] arr)</span> </span>&#123;</span><br><span class="line">  <span class="keyword">int</span> temp = arr[i];</span><br><span class="line">  arr[i] = arr[j];</span><br><span class="line">  arr[j] = temp;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>]]></content>
+      
+      <categories>
+          
+          <category> algorithms </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> Sort </tag>
+            
+            <tag> Selection Sort </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    <entry>
       <title>744. Find Smallest Letter Greater Than Target</title>
       <link href="/2018/05/24/744-Find-Smallest-Letter-Greater-Than-Target/"/>
       <url>/2018/05/24/744-Find-Smallest-Letter-Greater-Than-Target/</url>
@@ -337,11 +360,11 @@
             
             <tag> Linked List </tag>
             
+            <tag> lintcode </tag>
+            
             <tag> HashMap </tag>
             
             <tag> Cache </tag>
-            
-            <tag> lintcode </tag>
             
             <tag> hash </tag>
             
@@ -416,13 +439,13 @@
       
         <tags>
             
-            <tag> Linked List </tag>
-            
-            <tag> lintcode </tag>
-            
             <tag> heap </tag>
             
+            <tag> Linked List </tag>
+            
             <tag> merge sort </tag>
+            
+            <tag> lintcode </tag>
             
             <tag> medium </tag>
             
@@ -445,9 +468,9 @@
       
         <tags>
             
-            <tag> lintcode </tag>
-            
             <tag> heap </tag>
+            
+            <tag> lintcode </tag>
             
             <tag> medium </tag>
             
@@ -470,9 +493,9 @@
       
         <tags>
             
-            <tag> lintcode </tag>
-            
             <tag> heap </tag>
+            
+            <tag> lintcode </tag>
             
             <tag> medium </tag>
             
@@ -495,11 +518,11 @@
       
         <tags>
             
-            <tag> HashMap </tag>
-            
             <tag> lintcode </tag>
             
             <tag> medium </tag>
+            
+            <tag> HashMap </tag>
             
             <tag> ArrayList </tag>
             
