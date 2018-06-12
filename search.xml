@@ -3,10 +3,35 @@
   
     
     <entry>
+      <title>238. Product of Array Except Self</title>
+      <link href="/2018/06/12/238-Product-of-Array-Except-Self/"/>
+      <url>/2018/06/12/238-Product-of-Array-Except-Self/</url>
+      <content type="html"><![CDATA[<h3 id="explanation"><a href="#explanation" class="headerlink" title="explanation"></a>explanation</h3><p>Note: Please solve it without division and in O(n).</p><p>Follow up:<br>Could you solve it with constant space complexity? (The output array does not count as extra space for the purpose of space complexity analysis.)</p><ol><li>go through the array from begin to end</li><li>go through the array from end to begin</li></ol><h3 id="code"><a href="#code" class="headerlink" title="code"></a>code</h3><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span> </span>&#123;</span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">int</span>[] productExceptSelf(<span class="keyword">int</span>[] nums) &#123;</span><br><span class="line">        <span class="keyword">if</span> (nums == <span class="keyword">null</span> || nums.length == <span class="number">0</span>) &#123;</span><br><span class="line">            <span class="keyword">return</span> <span class="keyword">null</span>;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="comment">// Without division and in O(n).</span></span><br><span class="line">        <span class="keyword">int</span>[] result = <span class="keyword">new</span> <span class="keyword">int</span>[nums.length];</span><br><span class="line">        result[<span class="number">0</span>] = <span class="number">1</span>;</span><br><span class="line">        <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">1</span>; i &lt; nums.length; i++) &#123;</span><br><span class="line">            result[i] = result[i - <span class="number">1</span>] * nums[i - <span class="number">1</span>];</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">int</span> temp = <span class="number">1</span>;</span><br><span class="line">        <span class="keyword">for</span> (<span class="keyword">int</span> i = nums.length - <span class="number">1</span>; i &gt;= <span class="number">0</span>; i--) &#123;</span><br><span class="line">            result[i] = result[i] * temp;</span><br><span class="line">            temp = temp * nums[i];</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> result;</span><br><span class="line"></span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>]]></content>
+      
+      <categories>
+          
+          <category> algorithms </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> medium </tag>
+            
+            <tag> leetcode </tag>
+            
+            <tag> Array </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    <entry>
       <title>Install RabbitMQ</title>
       <link href="/2018/06/04/Install-RabbitMQ/"/>
       <url>/2018/06/04/Install-RabbitMQ/</url>
-      <content type="html"><![CDATA[<ol><li><p>install xcode</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">xcode-select --install</span><br></pre></td></tr></table></figure></li><li><p>Before installing make sure you have the latest brews:</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">brew update</span><br><span class="line">brew install rabbitmq</span><br></pre></td></tr></table></figure></li><li><p>Add PATH to .bash_profile<br>My OS: macOS Sierra 10.14.4<br>My RabbitMQ was installed into /usr/local/Cellar.</p></li></ol><p>In terminal:</p><p>ls /usr/local/Cellar/rabbitmq/<br>to check which version you have installed, and then add to .bash_profile:<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">export PATH=/usr/local/Cellar/rabbitmq/&lt;version&gt;/sbin:$PATH</span><br></pre></td></tr></table></figure></p>]]></content>
+      <content type="html"><![CDATA[<ol><li><p>install xcode</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">xcode-select --install</span><br></pre></td></tr></table></figure></li><li><p>Before installing make sure you have the latest brews:</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">brew update</span><br><span class="line">brew install rabbitmq</span><br></pre></td></tr></table></figure></li><li><p>Add PATH to .bash_profile<br>My OS: macOS Sierra 10.14.4<br>My RabbitMQ was installed into /usr/local/Cellar.<br>In terminal:<br>ls /usr/local/Cellar/rabbitmq/<br>to check which version you have installed, and then add to .bash_profile:</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">export PATH=/usr/local/Cellar/rabbitmq/&lt;version&gt;/sbin:$PATH</span><br></pre></td></tr></table></figure></li></ol>]]></content>
       
       <categories>
           
@@ -167,9 +192,9 @@
             
             <tag> medium </tag>
             
-            <tag> leetcode </tag>
-            
             <tag> Sort </tag>
+            
+            <tag> leetcode </tag>
             
         </tags>
       
