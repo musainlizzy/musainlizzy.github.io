@@ -6,7 +6,7 @@
       <title>Sort Numbers with Two Stacks</title>
       <link href="/2018/06/15/Sort-Numbers-with-Two-Stacks/"/>
       <url>/2018/06/15/Sort-Numbers-with-Two-Stacks/</url>
-      <content type="html"><![CDATA[<h3 id="explanation"><a href="#explanation" class="headerlink" title="explanation"></a>explanation</h3><p>s1 || 1 2 5 4 1<br>s2 ||</p><ol><li>1 -&gt; 2<br>s1 ||<br>s2 || 1 4 5 2 1</li><li>fill s1 with min</li></ol><p>s1 ||  1 1<br>s2 || 1 4 5 2 1</p><ol start="3"><li>s2 -&gt; s1</li></ol><p>s1 || 1 1 2 5 4<br>s2 ||<br>three variables:<br>global min 1<br>minCount<br>sortedNumber</p><h3 id="code"><a href="#code" class="headerlink" title="code"></a>code</h3><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> java.util.*;</span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">SortByTwoStacks</span> </span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span> <span class="params">(String[] args)</span> </span>&#123;</span><br><span class="line">        System.out.println(<span class="string">"Hello Java"</span>);</span><br><span class="line">        Deque&lt;Integer&gt; s1 = <span class="keyword">new</span> LinkedList&lt;&gt;();</span><br><span class="line">        s1.offerFirst(<span class="number">1</span>);</span><br><span class="line">        s1.offerFirst(<span class="number">6</span>);</span><br><span class="line">        s1.offerFirst(<span class="number">5</span>);</span><br><span class="line">        s1.offerFirst(<span class="number">5</span>);</span><br><span class="line">        s1.offerFirst(<span class="number">5</span>);</span><br><span class="line"></span><br><span class="line">        s1 = sortByStacks(s1);</span><br><span class="line"></span><br><span class="line">        <span class="keyword">while</span>(!s1.isEmpty()) &#123;</span><br><span class="line">            System.out.println(s1.peek());</span><br><span class="line">            s1.pollFirst();</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">private</span> <span class="keyword">static</span> Deque&lt;Integer&gt; <span class="title">sortByStacks</span><span class="params">(Deque&lt;Integer&gt; s1)</span> </span>&#123;</span><br><span class="line">        Deque&lt;Integer&gt; s2 = <span class="keyword">new</span> LinkedList&lt;&gt;();</span><br><span class="line">        <span class="keyword">int</span> sortedNumber = <span class="number">0</span>;</span><br><span class="line">        <span class="keyword">int</span> size = s1.size();</span><br><span class="line">        <span class="keyword">while</span> (sortedNumber != size) &#123;</span><br><span class="line">            <span class="keyword">int</span> min = Integer.MAX_VALUE;</span><br><span class="line">            <span class="keyword">int</span> minCount = <span class="number">0</span>;</span><br><span class="line">            <span class="keyword">int</span> remaining = size - sortedNumber;</span><br><span class="line">            <span class="keyword">while</span> (remaining != <span class="number">0</span>) &#123;</span><br><span class="line">                <span class="keyword">int</span> curt = s1.pollFirst();</span><br><span class="line">                <span class="keyword">if</span> (curt &lt; min) &#123;</span><br><span class="line">                    min = curt;</span><br><span class="line">                    minCount = <span class="number">1</span>;</span><br><span class="line">                &#125; <span class="keyword">else</span> <span class="keyword">if</span> (curt == min) &#123;</span><br><span class="line">                    minCount++;</span><br><span class="line">                &#125;</span><br><span class="line">                s2.offerFirst(curt);</span><br><span class="line">                remaining--;</span><br><span class="line">            &#125;</span><br><span class="line">        <span class="comment">//    System.out.println("min" + min + "minCount" + minCount);</span></span><br><span class="line">            sortedNumber += minCount;</span><br><span class="line">            <span class="keyword">while</span>(minCount != <span class="number">0</span>) &#123;</span><br><span class="line">                s1.offerFirst(min);</span><br><span class="line">                minCount--;</span><br><span class="line">            &#125;</span><br><span class="line"></span><br><span class="line">            <span class="keyword">while</span> (!s2.isEmpty()) &#123;</span><br><span class="line">                <span class="keyword">int</span> curt = s2.pollFirst();</span><br><span class="line">                <span class="keyword">if</span> (curt == min) &#123;</span><br><span class="line">                    <span class="keyword">continue</span>;</span><br><span class="line">                &#125;</span><br><span class="line">                s1.offerFirst(curt);</span><br><span class="line">            &#125;</span><br><span class="line"></span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> s1;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>]]></content>
+      <content type="html"><![CDATA[<h3 id="explanation"><a href="#explanation" class="headerlink" title="explanation"></a>explanation</h3><p>s1 || 1 2 5 4 1<br>s2 ||</p><p>Step 1: 1 -&gt; 2<br>s1 ||<br>s2 || 1 4 5 2 1</p><p>Step 2: fill s1 with min<br>s1 ||  1 1<br>s2 || 1 4 5 2 1</p><p>Step 3: s2 -&gt; s1<br>s1 || 1 1 2 5 4<br>s2 ||</p><p>three variables:<br>global min 1<br>minCount<br>sortedNumber</p><h3 id="code"><a href="#code" class="headerlink" title="code"></a>code</h3><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> java.util.*;</span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">SortByTwoStacks</span> </span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span> <span class="params">(String[] args)</span> </span>&#123;</span><br><span class="line">        System.out.println(<span class="string">"Hello Java"</span>);</span><br><span class="line">        Deque&lt;Integer&gt; s1 = <span class="keyword">new</span> LinkedList&lt;&gt;();</span><br><span class="line">        s1.offerFirst(<span class="number">1</span>);</span><br><span class="line">        s1.offerFirst(<span class="number">6</span>);</span><br><span class="line">        s1.offerFirst(<span class="number">5</span>);</span><br><span class="line">        s1.offerFirst(<span class="number">5</span>);</span><br><span class="line">        s1.offerFirst(<span class="number">5</span>);</span><br><span class="line"></span><br><span class="line">        s1 = sortByStacks(s1);</span><br><span class="line"></span><br><span class="line">        <span class="keyword">while</span>(!s1.isEmpty()) &#123;</span><br><span class="line">            System.out.println(s1.peek());</span><br><span class="line">            s1.pollFirst();</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">private</span> <span class="keyword">static</span> Deque&lt;Integer&gt; <span class="title">sortByStacks</span><span class="params">(Deque&lt;Integer&gt; s1)</span> </span>&#123;</span><br><span class="line">        Deque&lt;Integer&gt; s2 = <span class="keyword">new</span> LinkedList&lt;&gt;();</span><br><span class="line">        <span class="keyword">int</span> sortedNumber = <span class="number">0</span>;</span><br><span class="line">        <span class="keyword">int</span> size = s1.size();</span><br><span class="line">        <span class="keyword">while</span> (sortedNumber != size) &#123;</span><br><span class="line">            <span class="keyword">int</span> min = Integer.MAX_VALUE;</span><br><span class="line">            <span class="keyword">int</span> minCount = <span class="number">0</span>;</span><br><span class="line">            <span class="keyword">int</span> remaining = size - sortedNumber;</span><br><span class="line">            <span class="keyword">while</span> (remaining != <span class="number">0</span>) &#123;</span><br><span class="line">                <span class="keyword">int</span> curt = s1.pollFirst();</span><br><span class="line">                <span class="keyword">if</span> (curt &lt; min) &#123;</span><br><span class="line">                    min = curt;</span><br><span class="line">                    minCount = <span class="number">1</span>;</span><br><span class="line">                &#125; <span class="keyword">else</span> <span class="keyword">if</span> (curt == min) &#123;</span><br><span class="line">                    minCount++;</span><br><span class="line">                &#125;</span><br><span class="line">                s2.offerFirst(curt);</span><br><span class="line">                remaining--;</span><br><span class="line">            &#125;</span><br><span class="line">        <span class="comment">//    System.out.println("min" + min + "minCount" + minCount);</span></span><br><span class="line">            sortedNumber += minCount;</span><br><span class="line">            <span class="keyword">while</span>(minCount != <span class="number">0</span>) &#123;</span><br><span class="line">                s1.offerFirst(min);</span><br><span class="line">                minCount--;</span><br><span class="line">            &#125;</span><br><span class="line"></span><br><span class="line">            <span class="keyword">while</span> (!s2.isEmpty()) &#123;</span><br><span class="line">                <span class="keyword">int</span> curt = s2.pollFirst();</span><br><span class="line">                <span class="keyword">if</span> (curt == min) &#123;</span><br><span class="line">                    <span class="keyword">continue</span>;</span><br><span class="line">                &#125;</span><br><span class="line">                s1.offerFirst(curt);</span><br><span class="line">            &#125;</span><br><span class="line"></span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> s1;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>]]></content>
       
       <categories>
           
@@ -140,9 +140,9 @@
       
         <tags>
             
-            <tag> leetcode </tag>
-            
             <tag> binary search </tag>
+            
+            <tag> leetcode </tag>
             
             <tag> easy </tag>
             
@@ -474,11 +474,11 @@
             
             <tag> Linked List </tag>
             
+            <tag> lintcode </tag>
+            
             <tag> HashMap </tag>
             
             <tag> Cache </tag>
-            
-            <tag> lintcode </tag>
             
             <tag> hash </tag>
             
@@ -553,13 +553,13 @@
       
         <tags>
             
-            <tag> Linked List </tag>
-            
-            <tag> lintcode </tag>
-            
             <tag> heap </tag>
             
+            <tag> Linked List </tag>
+            
             <tag> merge sort </tag>
+            
+            <tag> lintcode </tag>
             
             <tag> medium </tag>
             
@@ -582,9 +582,9 @@
       
         <tags>
             
-            <tag> lintcode </tag>
-            
             <tag> heap </tag>
+            
+            <tag> lintcode </tag>
             
             <tag> medium </tag>
             
@@ -607,9 +607,9 @@
       
         <tags>
             
-            <tag> lintcode </tag>
-            
             <tag> heap </tag>
+            
+            <tag> lintcode </tag>
             
             <tag> medium </tag>
             
@@ -632,11 +632,11 @@
       
         <tags>
             
-            <tag> HashMap </tag>
-            
             <tag> lintcode </tag>
             
             <tag> medium </tag>
+            
+            <tag> HashMap </tag>
             
             <tag> ArrayList </tag>
             
@@ -661,9 +661,9 @@
             
             <tag> lintcode </tag>
             
-            <tag> String </tag>
-            
             <tag> easy </tag>
+            
+            <tag> String </tag>
             
         </tags>
       
@@ -686,11 +686,11 @@
             
             <tag> lintcode </tag>
             
+            <tag> easy </tag>
+            
             <tag> Queue </tag>
             
             <tag> Stack </tag>
-            
-            <tag> easy </tag>
             
         </tags>
       
@@ -713,9 +713,9 @@
             
             <tag> lintcode </tag>
             
-            <tag> Queue </tag>
-            
             <tag> easy </tag>
+            
+            <tag> Queue </tag>
             
         </tags>
       
